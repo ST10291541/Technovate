@@ -1,10 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollViewEvents"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CancerActivity">
+    android:padding="16dp"
+    android:background="#f1fcfc">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:id="@+id/linearLayoutEvents"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/tvCancerLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="16dp"
+            android:text="@string/Cancer_Label"
+            android:textAlignment="center"
+            android:textColor="#1DA1F2"
+            android:textSize="14pt"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvCancerInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:layout_marginBottom="12dp"
+            android:text="@string/Cancer_Info"
+            android:textAlignment="center"
+            android:textColor="#7F7F7F"
+            android:textSize="7pt" />
+
+        <TextView
+            android:id="@+id/tvCancerInfo2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:layout_marginBottom="12dp"
+            android:text="@string/Cancer_Info2"
+            android:textAlignment="center"
+            android:textColor="#7F7F7F"
+            android:textSize="7pt" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="350dp"
+            android:layout_height="250dp"
+            android:src="@drawable/difference_two" />
+
+        <Button
+            android:id="@+id/btnBack"
+            android:layout_width="150dp"
+            android:layout_height="35dp"
+            android:backgroundTint="#439A39"
+            android:text="Back"
+            android:textColor="#FFFFFF" />
+
+    </LinearLayout>
+</ScrollView>

@@ -18,7 +18,6 @@ class InformationActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_information)
 
-
         btnCancer = findViewById(R.id.btnCancer)
         btnBlood = findViewById(R.id.btnBlood)
         btnTypes = findViewById(R.id.btnTypes)
