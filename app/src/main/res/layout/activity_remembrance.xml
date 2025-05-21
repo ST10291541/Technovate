@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF0F5"
+    android:padding="16dp">
+
+	<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+		<!-- Title -->
+		<TextView
+            android:id="@+id/titleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="In Loving Memory"
+            android:textSize="28sp"
+            android:textColor="#C2185B"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"
+            android:paddingBottom="24dp" />
+
+		<!-- Remembrance Card 1 -->
+		<LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#F8BBD0"
+            android:padding="16dp"
+            android:layout_marginBottom="16dp"
+            android:elevation="2dp">
+
+			<!-- Image -->
+			<ImageView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_placeholder_image"
+                android:layout_marginBottom="12dp" />
+
+			<!-- Name -->
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="CHILDS NAME"
+				android:textColor="#880E4F"
+				android:textSize="20sp"
+				android:textStyle="bold" />
+
+			<!-- Age at Passing -->
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:paddingTop="4dp"
+				android:text="YEAR - YEAR"
+				android:textColor="#AD1457" />
+
+			<!-- More Info -->
+			<TextView
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:paddingTop="8dp"
+				android:text="Individuals Story"
+				android:textColor="#6A1B9A" />
+		</LinearLayout>
+
+		<!-- You can copy and paste the above LinearLayout block for more remembrance cards -->
+	</LinearLayout>
+</ScrollView>
