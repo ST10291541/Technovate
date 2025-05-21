@@ -2,11 +2,11 @@ package vcmsa.projects.chocui
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.google.android.material.button.MaterialButton
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -19,7 +19,9 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
-
-
+        // Setup contacts button click listener
+        findViewById<MaterialButton>(R.id.contactsButton).setOnClickListener {
+            startActivity(Intent(this, ContactsActivity::class.java))
+        }
     }
 }
