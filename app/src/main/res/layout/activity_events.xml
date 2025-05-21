@@ -19,7 +19,6 @@
             android:layout_height="wrap_content"
             android:text="Events:"
             android:textSize="24sp"
-
             android:textColor="#095E8C"
             android:textStyle="bold"
             android:layout_marginBottom="16dp"/>
