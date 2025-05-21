@@ -13,6 +13,9 @@
         android:theme="@style/Theme.CHOCUI"
         tools:targetApi="31">
         <activity
+            android:name=".VolunteerActivity"
+            android:exported="false" />
+        <activity
             android:name=".EWSActivity"
             android:exported="false" />
         <activity
