@@ -6,16 +6,6 @@
     android:background="#FFFFFF">
 
     <!-- Back Button -->
-    <ImageButton
-        android:id="@+id/buttonBack"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:layout_margin="16dp"
-        android:background="?attr/selectableItemBackgroundBorderless"
-        android:src="@android:drawable/ic_media_previous"
-        android:contentDescription="Go Back"
-        android:padding="8dp"
-        app:tint="#ECB400" />
 
 
     <!-- Scrollable Content -->
