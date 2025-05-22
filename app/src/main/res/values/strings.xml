@@ -219,4 +219,16 @@
                 • Bone marrow transplant
     </string>
 
+    <!-- Contact-->
+    <string name="contacts_title">Contacts</string>
+    <string name="contact_info_title">Contact Information</string>
+    <string name="phone_number">031 240 2917</string>
+    <string name="email_address">dbn@choc.org.za</string>
+    <string name="physical_address_title">Physical Address</string>
+    <string name="physical_address">CHOC House\n10 Church Road\nDurban, KwaZulu-Natal</string>
+    <string name="banking_details_title">Banking Details</string>
+    <string name="bank_name">First National Bank\nAccount: CHOC KZN\nAccount No: 12345678910\nBranch: 123456</string>
+    <string name="social_media_title">Social Media</string>
+    <string name="facebook_link">https://www.facebook.com/CHOC.Childhood.Cancer.Foundation/</string>
+
 </resources>
