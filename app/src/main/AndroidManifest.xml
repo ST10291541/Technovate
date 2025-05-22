@@ -13,6 +13,12 @@
         android:theme="@style/Theme.CHOCUI"
         tools:targetApi="31">
         <activity
+            android:name=".AboutUsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DonationsActivity"
+            android:exported="false" />
+        <activity
             android:name=".SarcomaActivity"
             android:exported="false" />
         <activity

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:gravity="center_horizontal">
+
+        <!-- "About us ?" Title -->
+        <TextView
+            android:text="About us ?"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#2056B1"
+            android:layout_marginTop="16dp"
+            android:gravity="center" />
+
+        <!-- CHOC Logo -->
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/choc_logo"
+            android:contentDescription="CHOC Logo"
+            android:layout_marginTop="16dp"
+            android:adjustViewBounds="true" />
+
+        <!-- "What is CHOC ?" -->
+        <TextView
+            android:text="What is CHOC ?"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#2056B1"
+            android:layout_marginTop="24dp" />
+
+        <!-- Description -->
+        <TextView
+            android:text="Childhood Cancer Foundation SA\nA non-profit organisation that advocates for the health and well-being of children and teenagers diagnosed with cancer or life-threatening blood disorders and their families.\n\nThe passionate and dedicated staff and volunteers of CHOC aim to save lives through early detection and comprehensive support programmes for the families affected by cancer.\n\nWe offer psychosocial, emotional and practical support as we augment the different medical fraternities."
+            android:textSize="16sp"
+            android:layout_marginTop="16dp"
+            android:textColor="#000000" />
+
+        <!-- Subheading -->
+        <TextView
+            android:text="Where We Keep Hope Alive"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_marginTop="24dp"
+            android:textColor="#000000" />
+
+
+        <TextView
+            android:text="CHOC has a national office in Johannesburg, and six regional offices offering services and support to the nine provinces of South Africa.\n\nThe regions are demographically positioned to ensure that we reach every child and family battling cancer in South Africa."
+            android:textSize="16sp"
+            android:layout_marginTop="8dp"
+            android:textColor="#000000" />
+
+        <!-- Gold Ribbon -->
+        <ImageView
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:src="@drawable/gold_ribbon"
+            android:contentDescription="Gold Ribbon"
+            android:layout_marginTop="24dp"
+            android:layout_gravity="end" />
+
+
+
+        <!-- Section Title -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="How CHOC Childhood Cancer Foundation Started and where we are now ?"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#2056B1"
+            android:layout_marginTop="32dp" />
+
+        <!-- Subheading Italic -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Read a selection of opinion pieces from world-class journalists."
+            android:textSize="16sp"
+            android:textStyle="italic"
+            android:textColor="#666666"
+            android:layout_marginTop="8dp" />
+
+        <!-- Founder Image -->
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="@drawable/choc_founder"
+            android:layout_marginTop="16dp"
+            android:scaleType="centerCrop"
+            android:contentDescription="CHOC Founder" />
+
+        <!-- Paragraphs -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="In 1977 Sister Sadie Cutland and her husband Julian’s firstborn, Hillary was diagnosed with aplastic anaemia at the age of seven.
+
+Two years later while leaving the ward one day Sadie was particularly saddened, because Hillary had been diagnosed for two years and she had yet to meet another parent of a child with aplastic anaemia.
+ Professor MacDougal then sowed the seed that gave Sadie the idea of forming a parents’ support group in Johannesburg. The objective was to share experiences and provide one-on-one support to each other. Sadie encouraged and inspired a group of volunteers and parents in 1979 who united to form CHOC. The caring and sharing came from personal experiences of the different emotional journeys and situations that both the parent and child could find themselves in and was shared openly, without reservations and with much love. From this hope was born and today CHOC is the leading childhood cancer organisation in South Africa providing comprehensive child and family support to thousands of childhood cancer beneficiaries. From humble beginnings today we augment the medical fraternity in hospitals across the country. What started off as a need for support, today is the helpline too many in need. These needs include psychosocial, emotional support and care, accommodation in 13 CHOC homes for patients to reside in, transportation of patients and caregivers in the fleet of 21 safe vehicles and so much more during their childhood cancer journey and beyond"
+            android:textSize="16sp"
+            android:layout_marginTop="16dp"
+            android:textColor="#333333" />
+
+        <!-- Padding bottom for spacing -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="48dp" />
+
+    </LinearLayout>
+</ScrollView>
+

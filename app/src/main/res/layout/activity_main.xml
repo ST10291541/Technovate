@@ -1,23 +1,308 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:background="#FFFFFF">
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/contactsButton"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/contacts_title"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        style="@style/Widget.Material3.Button.ElevatedButton"/>
+        android:padding="24dp">
 
+        <!-- Title -->
+        <TextView
+            android:id="@+id/chocHomeTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CHOC Home Page"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:textColor="#2196F3"
+            android:fontFamily="sans-serif-medium"
+            android:layout_marginBottom="16dp" />
 
+        <!-- CHOC Logo -->
+        <ImageView
+            android:id="@+id/chocLogo"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/choc_logo"
+            android:contentDescription="CHOC Logo"
+            android:layout_marginBottom="32dp"
+            android:adjustViewBounds="true" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <!-- About Us Block -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            android:background="@drawable/rounded_block"
+            android:elevation="8dp"
+            android:layout_marginBottom="24dp">
+
+            <ImageView
+                android:id="@+id/aboutImage"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/choc_cow"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="12dp"
+                android:contentDescription="CHOC Cow" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/aboutDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="This is the CHOC About us page where information about the CHOC organisation will be provided."
+                    android:textColor="#000000"
+                    android:textSize="14sp"
+                    android:layout_marginBottom="8dp" />
+
+                <Button
+                    android:id="@+id/aboutButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="About us"
+                    android:backgroundTint="#439A39"
+                    android:textColor="#FFFFFF"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Donation Block -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            android:background="@drawable/rounded_block"
+            android:elevation="8dp"
+            android:layout_marginBottom="24dp">
+
+            <ImageView
+                android:id="@+id/donationImage"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/donation_icon"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="12dp"
+                android:contentDescription="Donation Icon" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/donationDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Support children with cancer by donating to CHOC."
+                    android:textColor="#000000"
+                    android:textSize="14sp"
+                    android:layout_marginBottom="8dp" />
+
+                <Button
+                    android:id="@+id/donationButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Donate"
+                    android:backgroundTint="#FF6600"
+                    android:textColor="#FFFFFF" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Volunteer Block -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            android:background="@drawable/rounded_block"
+            android:elevation="8dp"
+            android:layout_marginBottom="24dp">
+
+            <ImageView
+                android:id="@+id/volunteerImage"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/volunteer_icon"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="12dp"
+                android:contentDescription="Volunteer Icon" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/volunteerDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Join us and volunteer to make a difference in a child's life."
+                    android:textColor="#000000"
+                    android:textSize="14sp"
+                    android:layout_marginBottom="8dp" />
+
+                <Button
+                    android:id="@+id/volunteerButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Volunteer"
+                    android:backgroundTint="#ffc300"
+                    android:textColor="#FFFFFF" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Information Block -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            android:background="@drawable/rounded_block"
+            android:elevation="8dp"
+            android:layout_marginBottom="24dp">
+
+            <ImageView
+                android:id="@+id/infoImage"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/info_icon"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="12dp"
+                android:contentDescription="Information Icon" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/infoDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Learn more about childhood cancer and support services."
+                    android:textColor="#000000"
+                    android:textSize="14sp"
+                    android:layout_marginBottom="8dp" />
+
+                <Button
+                    android:id="@+id/infoButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Info"
+                    android:backgroundTint="#84c225"
+                    android:textColor="#FFFFFF" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Events Block -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            android:background="@drawable/rounded_block"
+            android:elevation="8dp"
+            android:layout_marginBottom="24dp">
+
+            <ImageView
+                android:id="@+id/eventsImage"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/events_icon"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="12dp"
+                android:contentDescription="Events Icon" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/eventsDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Stay updated on our upcoming events and fundraisers."
+                    android:textColor="#000000"
+                    android:textSize="14sp"
+                    android:layout_marginBottom="8dp" />
+
+                <Button
+                    android:id="@+id/eventsButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Events"
+                    android:backgroundTint="#095E8c"
+                    android:textColor="#FFFFFF" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Contacts Block -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            android:background="@drawable/rounded_block"
+            android:elevation="8dp"
+            android:layout_marginBottom="24dp">
+
+            <ImageView
+                android:id="@+id/contactImage"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/contact_icon"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="12dp"
+                android:contentDescription="Contact Icon" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/contactDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Reach out to us for any inquiries or support."
+                    android:textColor="#000000"
+                    android:textSize="14sp"
+                    android:layout_marginBottom="8dp" />
+
+                <Button
+                    android:id="@+id/contactButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Contact Us"
+                    android:backgroundTint="#0093DD"
+                    android:textColor="#FFFFFF" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
+

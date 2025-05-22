@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:gravity="center_horizontal">
+
+        <!-- Top Title -->
+        <TextView
+            android:id="@+id/tv_wait_over"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="THE LONG WAIT IS OVER"
+            android:textColor="#999999"
+            android:textSize="14sp"
+            android:fontFamily="serif"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- Main Heading -->
+        <TextView
+            android:id="@+id/tv_heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Join the herd and\nsupport CHOC !!"
+            android:textColor="#003399"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Cow Image -->
+        <ImageView
+            android:id="@+id/img_cow"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:src="@drawable/cow_mascot"
+            android:contentDescription="CHOC Cow"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- QR Code Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:weightSum="3"
+            android:layout_marginBottom="8dp">
+
+            <!-- PayPal -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/paypal_logo"
+                    android:contentDescription="PayPal Logo"/>
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/qr_paypal"
+                    android:contentDescription="PayPal QR"
+                    android:layout_marginTop="8dp"/>
+            </LinearLayout>
+
+            <!-- Ozow -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ozow_logo"
+                    android:contentDescription="Ozow Logo"/>
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="8dp"
+                    android:contentDescription="Ozow QR"
+                    android:src="@drawable/qr_ozow" />
+            </LinearLayout>
+
+            <!-- Wallet Doc -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/walletdoc_logo"
+                    android:contentDescription="WalletDoc Logo"/>
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/qr_walletdoc"
+                    android:contentDescription="WalletDoc QR"
+                    android:layout_marginTop="8dp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Donate Button -->
+        <Button
+            android:id="@+id/btn_donate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Donate"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:backgroundTint="#1E63B5"
+            android:textSize="18sp"
+            android:padding="12dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="24dp"
+            android:background="@drawable/rounded_button"/>
+
+    </LinearLayout>
+</ScrollView>
+
