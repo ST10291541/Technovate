@@ -8,14 +8,14 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
-class BloodActivity : AppCompatActivity() {
+class LeukemiaActivity : AppCompatActivity() {
 
     private lateinit var btnBack: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_blood)
+        setContentView(R.layout.activity_leukemia)
 
         btnBack = findViewById(R.id.btnBack)
 

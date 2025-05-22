@@ -1,3 +1,222 @@
 <resources>
     <string name="app_name">CHOCUI</string>
+
+    <!-- Cancer-->
+    <string name="Cancer_Label">
+        What is Cancer?
+    </string>
+
+    <string name="Cancer_Info">
+        Cancer is the disease of cells.
+        Cells are building blocks of organs and tissue of the body.
+        Cancer begins when the cell or cells begin to multiply and grow without control.
+        These cancerous cells stop working properly and as their number increases, they form a lump or tumor.
+        Should it not be treated in time, the cancerous cells take over the normal cells.
+    </string>
+
+    <string name="Cancer_Info2">
+        Childhood cancers are different to adults in that they tend to occur in the child\'s organs,
+        they look different under a microscope and respond differently to treatment as it is more favorable.
+        Cure rates for childhood cancer is much higher than in adults.
+    </string>
+
+
+    <!-- Blood-->
+    <string name="Blood_Label">
+        Blood Disorders
+    </string>
+
+    <string name="Blood_Info">
+        The central portion of flat bones and vertebrae is filled with red spongy tissue called bone marrow which is the factory of blood cells.
+        When bone marrow fails to produce blood cells, that is called aplastic anaemia or bone marrow failure.
+        This lack of cells results in pancytopaenia which is when all three blood cell types are decreased.
+    </string>
+
+    <string name="Blood_Info2">
+        Anaemia:\n
+        • The lack of red blood cells causes weakness, tiredness, breathlessness, and a pale appearance.\n
+        • Usually measured as haemoglobin levels.\n\n
+        Platelets:\n
+        • Low platelets cause easy bruising, nose and gum bleeding, and can cause serious internal bleeding.\n
+        • The most serious internal bleed is bleeding in the brain.\n\n
+        White Blood Cells:\n
+        • Low white blood cells result in the body being unable to fight infections.\n
+        • Causes unexplained fevers.
+    </string>
+
+    <string name="Blood_Info3">
+        Anaemia is a sign/symptom of the lack of red blood cells and has many causes, but it is not a diagnosis.\n
+        • Bone marrow infiltration (e.g. leukemia) affects red blood cell production.\n
+        • Bone marrow failure may affect all cells (aplastic anaemia) or only red blood cells (red cell aplasia).\n
+        • Iron deficiency is the most common cause and found in early stages of childhood under the age of 6.\n
+        • Destruction of red blood cells in the blood and spleen (haemolytic anaemia) causes jaundice (yellow eyes) with anaemia.\n
+        • Chronic blood loss.
+    </string>
+
+    <!-- Types-->
+    <string name="Leukemia_Label">
+        Leukemia
+    </string>
+
+    <string name="Leukemia_Info">
+        Leukemia or blood cancer starts in bone marrow where blood cells are produced and is the most common type of cancer accounting for 34%.
+        During this process, sometimes abnormal cells are developed.
+        The body usually has various ways to get rid of abnormal cells but if one abnormal white blood cell starts multiplying uncontrollably and becomes a group of fast multiplying leukemia (blood cancer) cells.
+        These cells spill out of the bone marrow into the blood and is therefore called blood cancer.\n\n
+
+        Common Symptoms:\n
+                • Persistent infection (the body\'s immunity level is low)\n
+                • Abnormal bruising, petechiae (red small dots under the skin) and even bleeding (nose and gums) as platelets count is low\n
+                • Anaemia\n
+                • Generally unwell and weak\n
+                • Complains of aches and pains in the limbs (the marrow space is stretched) and abdomen (liver, spleen and nodes become full of cells)\n\n
+
+        Diagnosis:\n
+                • Blood tests determine low number of normal cells and abnormal cells\n\n
+
+        Treatment:\n
+                • Intensive chemotherapy lasting 6-9 months followed by intensive therapy called maintenance for 2-3 years
+
+    </string>
+
+    <string name="Brain_Label">
+        Brain Tumor
+    </string>
+
+    <string name="Brain_Info">
+        Brain tumors are masses or growths of abnormal cells that occur in the child\'s brain or tissues and structures near it.
+        This is the second most common type of cancer and accounts for 22%.
+        Brain tumors can be benign meaning its non-cancerous or malignant meaning it is cancerous.
+        Majority of childhood brain tumors are malignant.
+        They spread within the brain and spinal cord.
+        Although, tissues on the brain stem can be removed. \n\n
+
+        Common Symptoms:\n
+        The skull is like a fixed box, any tumor growing inside will increase the pressure on the brain. This pressure causes: \n
+                • Headaches (mostly sever in the mornings)\n
+                • Early morning projectile vomiting\n
+                • Drowsiness\n
+                • Irritability\n
+                • Loss of appetite\n
+                • Loss of interest in school or other activities\n
+                • Hydrocephalus is the result of spinal fluid building up in the brain as the channels are blocked by the tumor \n\n
+
+        If the pressure presses on a certain brain cell or nerve, this will cause: \n
+                • Early morning headaches (raised intracranial pressure)\n
+                • Muscle weakness\n
+                • Double vision, squinted or loss of vision\n
+                • Difficulty swallowing \n\n
+
+        Diagnosis:\n
+                • Computed Tomography (CT) and Magnetic Resonance Imaging (MRI) scans of the brain\n\n
+
+        Treatment:\n
+                • Surgery\n
+                • Chemotherapy\n
+                • Radiation Therapy
+    </string>
+
+    <string name="Lymphoma_Label">
+        Lymphoma
+    </string>
+
+    <string name="Lymphoma_Info">
+        These are tumors found in the lymph nodes being the third most common type of cancer and accounts for 11% of childhood cancers.
+        The lymphatic system is made up of a collection of lymph nodes the size of a pea.
+        They are connected by lymphatic vessels which circulate fluid and cells.
+        They control infections and provide collecting/ transporting for white blood cells and helps fight infections.\n\n
+
+        Common Symptoms:\n
+        Neck: \n
+                • Large glands on one or both sides that do not go away when treated with antibiotics\n\n
+
+        Chest: \n
+                • Large nodal mass in the chest causes coughs, breathlessness, difficulty swallowing, swelling of the neck, face and eye puffiness\n\n
+
+        Abdomen: \n
+                • Swelling of the tummy with lumps or fluid, pain, constipation and vomiting\n\n
+
+                • Fever\n
+                • Tiredness\n
+                • Anaemia\n
+                • Loss of appetite and weight\n
+                • Night sweats\n\n
+
+        Diagnosis:\n
+                • Biopsy of the affected gland, bone marrow exam, X-rays, CT and nuclear scans\n\n
+
+        Treatment:\n
+                • Chemotherapy between 6 months - 2 years followed by a possibility of radiotherapy
+    </string>
+
+    <string name="Wilms_Label">
+        Wilms Tumor (Nephroblastoma)
+    </string>
+
+    <string name="Wilms_Info">
+        Nephroblastomas are one of the types of embryonal tumors that accounts for 14% of childhood cancers.
+        It affects only one kidney in patients under 5 years old.\n
+        The size, spread and nature determines the stage:
+        Stage 1: \n
+                • Tumors are confined to the kidney and engulfed in a capsule\n\n
+        Stage 2: \n
+                • Tumor extends beyond the capsule of the kidney but can be removed completely with surgery\n\n
+        Stage 3: \n
+                • After surgery, some tissue remains but is confined to the abdomen with no spread to the lungs/ lymph nodes\n\n
+        Stage 4: \n
+                • After surgery, evidence shows that the tumor spread via the blood system and may be positioned in the lung, liver, bone or brain\n\n
+        Stage 5: \n
+                • Both kidneys are involved meaning there is stage 2 in the right kidney and stage 1 n the left kidney\n\n
+
+        Common Symptoms:\n
+        Symptoms are non-specific and only noticed by parents when the child\'s tummy becomes swollen/feeling particular firm/hard.
+        Sometimes there\'s pain in the abdomen, fever or blood in the urine.\n\n
+
+        Diagnosis:\n
+                • Ultrasound and CT scan for the kidney\n
+                • Blood tests and X-rays of the chest\n\n
+
+        Treatment:\n
+                • Chemotherapy 4-8 weeks prior to surgery\n
+                • Chemotherapy 3-12 months post surgery and radiotherapy if needed
+    </string>
+
+    <string name="Sarcoma_Label">
+        Soft Tissue Sarcomas (Rhabdomysarcoma)
+    </string>
+
+    <string name="Sarcoma_Info">
+        Theses tumors grow in the muscles or fibrous tissue around the muscles.
+        It is the most common in children between birth and the age of 5 years old.
+        It can occur anywhere in the body where muscles exist.\n\n
+
+        Common Symptoms:\n
+                • Ultrasound and CT scan for the kidney\n\n
+        Eye socket: \n
+                • Protrusion of the eye\n\n
+        Sinus:\n
+                • Blocked nose and bloody nasal discharge\n\n
+        Nerves in the face/head:\n
+                • Paralysis of facial muscles/ abnormal movement of the eyes/eyelids\n
+                • Headaches, vomiting and high blood pressure\n\n
+        Bladder/Prostate:\n
+                • Blood in the urine/ difficulty passing urine\n
+                • Mass in the pelvis/constipation\n\n
+        Cervix/Vagina:\n
+                • Extrusion of tissue from within the vagina or bloody/mucinous discharge\n\n
+        Testicle:\n
+                • Enlarged lymph nodes/ lump in the scrotum\n\n
+        Limb:\n
+                • Pain at the site with an obvious lump\n
+                • Nodes under the arm or n the groin become swollen\n\n
+        Chest:\n
+                • Larger enough tumor causes compression on the airway or other structures which causes coughing, chest pain and rapid breathing\n\n
+        Diagnosis:\n
+                • CT, MRI and ultrasound scans \n
+                • Bone marrow exam and blood test\n\n
+        Treatment:\n
+                • Chemotherapy to shrink the tumor, surgery or radiotherapy  for 1-2 years\n
+                • Bone marrow transplant
+    </string>
+
 </resources>

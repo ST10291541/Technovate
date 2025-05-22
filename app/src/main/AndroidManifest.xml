@@ -13,6 +13,21 @@
         android:theme="@style/Theme.CHOCUI"
         tools:targetApi="31">
         <activity
+            android:name=".SarcomaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".WilmsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LymphomaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BrainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LeukemiaActivity"
+            android:exported="false" />
+        <activity
             android:name=".VolunteerActivity"
             android:exported="false" />
         <activity
