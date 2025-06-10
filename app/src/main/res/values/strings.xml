@@ -225,9 +225,9 @@
     <string name="phone_number">031 240 2917</string>
     <string name="email_address">dbn@choc.org.za</string>
     <string name="physical_address_title">Physical Address</string>
-    <string name="physical_address">CHOC House\n10 Church Road\nDurban, KwaZulu-Natal</string>
+    <string name="physical_address">Inkosi Albert Luthuli Central Hospital\nLower Block A Residential Village\n800 Vusi Mzemela Road\nCato Manor, Durban 4091</string>
     <string name="banking_details_title">Banking Details</string>
-    <string name="bank_name">First National Bank\nAccount: CHOC KZN\nAccount No: 12345678910\nBranch: 123456</string>
+    <string name="bank_name">CHOC KZN\nStandard Bank Killarney\nAccount No: 241 319 978\nBranch Code: 007205</string>
     <string name="social_media_title">Social Media</string>
     <string name="facebook_link">https://www.facebook.com/CHOC.Childhood.Cancer.Foundation/</string>
 
