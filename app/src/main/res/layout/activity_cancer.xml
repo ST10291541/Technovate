@@ -53,13 +53,5 @@
             android:layout_height="250dp"
             android:src="@drawable/difference_two" />
 
-        <Button
-            android:id="@+id/btnBack"
-            android:layout_width="150dp"
-            android:layout_height="35dp"
-            android:backgroundTint="#439A39"
-            android:text="Back"
-            android:textColor="#FFFFFF" />
-
     </LinearLayout>
 </ScrollView>
