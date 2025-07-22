@@ -21,10 +21,12 @@
             android:padding="16dp">
 
             <TextView
-                android:text="About us ?"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="About Us"
                 android:textSize="28sp"
                 android:textStyle="bold"
-                android:textColor="#FFFFFF"
+                android:textColor="#2056B1"
                 android:gravity="center" />
 
             <ImageView
@@ -119,7 +121,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:background="#E6EEF9"
+            android:backgroundtint="#E6EEF9"
             android:padding="20dp"
             android:elevation="3dp"
             android:layout_marginTop="24dp"
@@ -127,6 +129,8 @@
             android:background="@drawable/rounded_card">
 
             <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:text="How CHOC Childhood Cancer Foundation Started and where we are now ?"
                 android:textSize="20sp"
                 android:textStyle="bold"
