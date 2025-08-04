@@ -1,26 +1,22 @@
 package vcmsa.projects.chocui
 
-import android.content.Intent
 import android.os.Bundle
-import android.widget.Button
 import androidx.activity.enableEdgeToEdge
-import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
+import com.google.android.material.appbar.MaterialToolbar
 
-class BloodActivity : AppCompatActivity() {
-
-    private lateinit var btnBack: Button
-
+class BloodActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_blood)
 
-        btnBack = findViewById(R.id.btnBack)
+        // Set up the toolbar
+        val toolbar = findViewById<MaterialToolbar>(R.id.topAppBar)
+        setSupportActionBar(toolbar)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.setHomeAsUpIndicator(R.drawable.ic_menu)
 
-        btnBack.setOnClickListener {
-            startActivity(Intent(this, InformationActivity::class.java))
-        }
+        // Set up the navigation drawer
+        setupNavigationDrawer()
     }
 }

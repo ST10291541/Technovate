@@ -3,10 +3,10 @@ package vcmsa.projects.chocui
 import android.os.Bundle
 import android.widget.Button
 import androidx.activity.enableEdgeToEdge
-import androidx.appcompat.app.AppCompatActivity
 import android.content.Intent
+import com.google.android.material.appbar.MaterialToolbar
 
-class InformationActivity : AppCompatActivity() {
+class InformationActivity : BaseActivity() {
 
     private lateinit var btnCancer: Button
     private lateinit var btnBlood: Button
@@ -18,12 +18,22 @@ class InformationActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_information)
 
+        // Set up the toolbar
+        val toolbar = findViewById<MaterialToolbar>(R.id.topAppBar)
+        setSupportActionBar(toolbar)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.setHomeAsUpIndicator(R.drawable.ic_menu)
+
+        // Set up the navigation drawer
+        setupNavigationDrawer()
+
+        // Initialize buttons
         btnCancer = findViewById(R.id.btnCancer)
         btnBlood = findViewById(R.id.btnBlood)
         btnTypes = findViewById(R.id.btnTypes)
         btnEWS = findViewById(R.id.btnEWS)
 
-        // add actvity screens for buttons
+        // Set up button click listeners
         btnCancer.setOnClickListener {
             startActivity(Intent(this, CancerActivity::class.java))
         }
@@ -39,6 +49,5 @@ class InformationActivity : AppCompatActivity() {
         btnEWS.setOnClickListener {
             startActivity(Intent(this, EWSActivity::class.java))
         }
-
     }
 }

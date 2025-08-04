@@ -4,11 +4,11 @@ import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import com.google.android.material.appbar.MaterialToolbar
 
-class CancerActivity : BaseActivity() {
+class RemembranceActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_cancer)
+        setContentView(R.layout.activity_remembrance)
 
         // Set up the toolbar
         val toolbar = findViewById<MaterialToolbar>(R.id.topAppBar)

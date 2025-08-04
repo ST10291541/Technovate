@@ -4,12 +4,11 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import androidx.activity.enableEdgeToEdge
-import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.google.android.material.button.MaterialButton
+import com.google.android.material.appbar.MaterialToolbar
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : BaseActivity() {
 
     private lateinit var btnAbout: Button
     private lateinit var btnDonate: Button
@@ -23,6 +22,16 @@ class MainActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
 
+        // Set up the toolbar
+        val toolbar = findViewById<MaterialToolbar>(R.id.topAppBar)
+        setSupportActionBar(toolbar)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.setHomeAsUpIndicator(R.drawable.ic_menu)
+
+        // Set up the navigation drawer
+        setupNavigationDrawer()
+
+        // Initialize buttons
         btnAbout = findViewById(R.id.aboutButton)
         btnDonate = findViewById(R.id.donationButton)
         btnVolunteer = findViewById(R.id.volunteerButton)
@@ -30,7 +39,7 @@ class MainActivity : AppCompatActivity() {
         btnEvents = findViewById(R.id.eventsButton)
         btnContact = findViewById(R.id.contactButton)
 
-        // add actvity screens for buttons
+        // Set up button click listeners
         btnAbout.setOnClickListener {
             startActivity(Intent(this, AboutUsActivity::class.java))
         }
@@ -53,6 +62,12 @@ class MainActivity : AppCompatActivity() {
 
         btnContact.setOnClickListener {
             startActivity(Intent(this, ContactsActivity::class.java))
+        }
+
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
+            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
+            insets
         }
     }
 }
