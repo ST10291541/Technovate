@@ -39,9 +39,31 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Events content will be displayed here"
-                    android:textAppearance="?attr/textAppearanceBodyLarge"
-                    android:gravity="center"/>
+                    android:text="🎉 CHOC Events 🎉"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:paddingBottom="26dp"/>
+                <TextView
+                    android:id="@+id/eventsDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Stay connected with the CHOC community! From awareness walks and fundraising drives to family support activities, our events bring together children, parents, caregivers, and supporters to share hope and strength."
+                    android:textSize="16sp"
+                    android:lineSpacingExtra="4dp"
+                    android:paddingBottom="24dp" />
+
+                <Button
+                    android:id="@+id/btnViewEvents"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="View Live Events on CHOC Website"
+                    android:textColor="@android:color/white"
+                    android:padding="12dp"
+                    android:textAllCaps="false"
+                    android:layout_marginTop="16dp"/>
+
+
 
             </LinearLayout>
 

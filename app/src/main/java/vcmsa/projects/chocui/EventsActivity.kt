@@ -1,12 +1,20 @@
 package vcmsa.projects.chocui
 
+import vcmsa.projects.chocui.R
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
+import android.view.View
+import android.widget.Button
 import com.google.android.material.appbar.MaterialToolbar
+
 
 class EventsActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_events)
+
+        val viewEventsButton = findViewById<Button>(R.id.btnViewEvents)
 
         // Set up the toolbar
         val toolbar = findViewById<MaterialToolbar>(R.id.topAppBar)
@@ -17,6 +25,13 @@ class EventsActivity : BaseActivity() {
         // Set up the navigation drawer
         setupNavigationDrawer()
 
-        // TODO: Add events-specific functionality here
+
+
+        viewEventsButton.setOnClickListener { v: View? ->
+            val url = "https://choc.org.za/events/"
+            val intent = Intent(Intent.ACTION_VIEW)
+            intent.setData(Uri.parse(url))
+            startActivity(intent)
+        }
     }
 }
