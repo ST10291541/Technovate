@@ -18,7 +18,7 @@ class ContactsActivity : BaseActivity() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setHomeAsUpIndicator(R.drawable.ic_menu)
 
-        // Set up the navigation drawer
+        // Setup navigation drawer
         setupNavigationDrawer()
 
         // Setup phone button
@@ -28,7 +28,7 @@ class ContactsActivity : BaseActivity() {
             }
             startActivity(intent)
         }
-
+        
         // Setup email button
         findViewById<MaterialButton>(R.id.emailButton).setOnClickListener {
             val intent = Intent(Intent.ACTION_SENDTO).apply {
@@ -37,10 +37,10 @@ class ContactsActivity : BaseActivity() {
             startActivity(intent)
         }
 
-        // Setup Facebook button
+        // Setup social media buttons
         findViewById<MaterialButton>(R.id.facebookButton).setOnClickListener {
             val intent = Intent(Intent.ACTION_VIEW).apply {
-                data = Uri.parse(getString(R.string.facebook_link))
+                data = Uri.parse("https://www.facebook.com/CHOC.Childhood.Cancer.Foundation/")
             }
             startActivity(intent)
         }

@@ -1,175 +1,162 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F0F4F8">
+    android:fitsSystemWindows="true">
 
-
-
-    <LinearLayout
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="16dp"
-        android:gravity="center_horizontal">
+        android:layout_height="match_parent">
 
-        <com.google.android.material.appbar.MaterialToolbar
-            android:id="@+id/topAppBar"
+        <com.google.android.material.appbar.AppBarLayout
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
-            android:theme="@style/ThemeOverlay.Material3.ActionBar"
-            android:title="About Us"
-            android:titleTextColor="@android:color/white" />
+            android:layout_height="wrap_content">
 
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/topAppBar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                app:title="About Us"
+                style="@style/Widget.Material3.Toolbar" />
 
-        <!-- Gradient Header -->
-        <LinearLayout
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:orientation="vertical"
-            android:gravity="center"
-            android:background="@drawable/header_gradient"
-            android:padding="16dp">
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="About Us"
-                android:textSize="28sp"
-                android:textStyle="bold"
-                android:textColor="#2056B1"
-                android:gravity="center" />
-
-            <ImageView
-                android:layout_width="140dp"
-                android:layout_height="wrap_content"
-                android:src="@drawable/choc_logo"
-                android:contentDescription="CHOC Logo"
-                android:layout_marginTop="16dp"
-                android:adjustViewBounds="true"
-                android:background="@drawable/rounded_bg"
-                android:elevation="6dp"
-                android:padding="8dp" />
-        </LinearLayout>
-
-        <!-- FIXED Card: What is CHOC -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:background="@drawable/rounded_card"
-            android:padding="20dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginBottom="16dp"
-            android:elevation="6dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="What is CHOC ?"
-                android:textSize="22sp"
-                android:textStyle="bold"
-                android:textColor="#2056B1" />
-
-            <View
-                android:layout_width="40dp"
-                android:layout_height="2dp"
-                android:background="#2056B1"
-                android:layout_marginTop="4dp"
-                android:layout_marginBottom="12dp" />
-
-            <TextView
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Childhood Cancer Foundation SA"
-                android:textStyle="bold"
-                android:textSize="16sp"
-                android:textColor="#000000"
-                android:layout_marginTop="16dp" />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Non-profit organisation that advocates for the health and well-being of children and teenagers diagnosed with cancer or life-threatening blood disorders and their families.\n\nThe passionate and dedicated staff and volunteers of CHOC aim to save lives through early detection and comprehensive support programmes for the families affected by cancer.\n\nWe offer psychosocial, emotional and practical support as we augment the different medical fraternities."
-                android:textSize="16sp"
-                android:textColor="#444444"
-                android:layout_marginTop="4dp" />
+                android:orientation="vertical"
+                android:padding="24dp"
+                android:gravity="center_horizontal">
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Where We Keep Hope Alive"
-                android:textStyle="bold"
-                android:textSize="16sp"
-                android:textColor="#000000"
-                android:layout_marginTop="16dp" />
+                <!-- "About us ?" Title -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="About us ?"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:textColor="#2056B1"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="CHOC has a national office in Johannesburg, and six regional offices offering services and support to the nine provinces of South Africa.\n\nThe regions are demographically positioned to ensure that we reach every child and family battling cancer in South Africa."
-                android:textSize="16sp"
-                android:textColor="#000000"
-                android:layout_marginTop="8dp" />
-        </LinearLayout>
+                <!-- CHOC Logo -->
+                <ImageView
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/choc_logo"
+                    android:contentDescription="CHOC Logo"
+                    android:layout_marginTop="16dp"
+                    android:adjustViewBounds="true" />
 
+                <!-- "What is CHOC ?" -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="What is CHOC ?"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#2056B1"
+                    android:layout_marginTop="24dp" />
 
+                <!-- Description -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Childhood Cancer Foundation SA\nA non-profit organisation that advocates for the health and well-being of children and teenagers diagnosed with cancer or life-threatening blood disorders and their families.\n\nThe passionate and dedicated staff and volunteers of CHOC aim to save lives through early detection and comprehensive support programmes for the families affected by cancer.\n\nWe offer psychosocial, emotional and practical support as we augment the different medical fraternities."
+                    android:textSize="16sp"
+                    android:layout_marginTop="16dp"
+                    android:textColor="#000000" />
 
-        <!-- Decorative Ribbon -->
-        <ImageView
-            android:layout_width="72dp"
-            android:layout_height="72dp"
-            android:src="@drawable/gold_ribbon"
-            android:contentDescription="Gold Ribbon"
-            android:layout_marginTop="8dp"
-            android:layout_gravity="center"
-            android:background="@drawable/rounded_bg"
-            android:elevation="6dp"
-            android:padding="8dp" />
+                <!-- Subheading -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Where We Keep Hope Alive"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:layout_marginTop="24dp"
+                    android:textColor="#000000" />
 
-        <!-- Section: History -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:backgroundTint="#E6EEF9"
-            android:padding="20dp"
-            android:elevation="3dp"
-            android:layout_marginTop="24dp"
-            android:background="@drawable/rounded_card">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="CHOC has a national office in Johannesburg, and six regional offices offering services and support to the nine provinces of South Africa.\n\nThe regions are demographically positioned to ensure that we reach every child and family battling cancer in South Africa."
+                    android:textSize="16sp"
+                    android:layout_marginTop="8dp"
+                    android:textColor="#000000" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="How CHOC Childhood Cancer Foundation Started and where we are now ?"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:textColor="#2056B1"
-                android:layout_marginBottom="8dp" />
+                <!-- Gold Ribbon -->
+                <ImageView
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:src="@drawable/gold_ribbon"
+                    android:contentDescription="Gold Ribbon"
+                    android:layout_marginTop="24dp"
+                    android:layout_gravity="end" />
 
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:src="@drawable/choc_founder"
-                android:layout_marginTop="12dp"
-                android:scaleType="centerCrop"
-                android:contentDescription="CHOC Founder"
-                android:background="@drawable/rounded_bg"
-                android:elevation="6dp"
-                android:padding="4dp" />
+                <!-- Section Title -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="How CHOC Childhood Cancer Foundation Started and where we are now ?"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#2056B1"
+                    android:layout_marginTop="32dp" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="In 1977, Sister Sadie Cutland’s daughter, Hillary, was diagnosed with aplastic anaemia. After years without meeting another parent in a similar situation, Sadie was inspired—thanks to Professor MacDougal—to start a support group for families. In 1979, CHOC was born. What began as a small group of volunteers has grown into South Africa’s leading childhood cancer organisation, providing emotional support, accommodation, transport, and care to thousands of families across the country."
-                android:textSize="16sp"
-                android:layout_marginTop="16dp"
-                android:textColor="#333333" />
-        </LinearLayout>
+                <!-- Subheading Italic -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Read a selection of opinion pieces from world-class journalists."
+                    android:textSize="16sp"
+                    android:textStyle="italic"
+                    android:textColor="#666666"
+                    android:layout_marginTop="8dp" />
 
-        <!-- Bottom Space -->
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="48dp" />
-    </LinearLayout>
-</ScrollView>
+                <!-- Founder Image -->
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:src="@drawable/choc_founder"
+                    android:layout_marginTop="16dp"
+                    android:scaleType="centerCrop"
+                    android:contentDescription="CHOC Founder" />
+
+                <!-- Paragraphs -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="In 1977 Sister Sadie Cutland and her husband Julian's firstborn, Hillary was diagnosed with aplastic anaemia at the age of seven.\n\nTwo years later while leaving the ward one day Sadie was particularly saddened, because Hillary had been diagnosed for two years and she had yet to meet another parent of a child with aplastic anaemia.\n\nProfessor MacDougal then sowed the seed that gave Sadie the idea of forming a parents' support group in Johannesburg. The objective was to share experiences and provide one-on-one support to each other. Sadie encouraged and inspired a group of volunteers and parents in 1979 who united to form CHOC. The caring and sharing came from personal experiences of the different emotional journeys and situations that both the parent and child could find themselves in and was shared openly, without reservations and with much love. From this hope was born and today CHOC is the leading childhood cancer organisation in South Africa providing comprehensive child and family support to thousands of childhood cancer beneficiaries. From humble beginnings today we augment the medical fraternity in hospitals across the country. What started off as a need for support, today is the helpline too many in need. These needs include psychosocial, emotional support and care, accommodation in 13 CHOC homes for patients to reside in, transportation of patients and caregivers in the fleet of 21 safe vehicles and so much more during their childhood cancer journey and beyond"
+                    android:textSize="16sp"
+                    android:layout_marginTop="16dp"
+                    android:textColor="#333333" />
+
+                <!-- Padding bottom for spacing -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp" />
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:headerLayout="@layout/nav_header"
+        app:menu="@menu/navigation_menu" />
+
+</androidx.drawerlayout.widget.DrawerLayout>

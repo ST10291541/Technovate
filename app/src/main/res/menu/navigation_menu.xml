@@ -22,8 +22,8 @@
             android:icon="@android:drawable/ic_menu_today"
             android:title="@string/nav_events" />
         <item
-            android:id="@+id/nav_remembrance"
-            android:icon="@android:drawable/ic_menu_recent_history"
-            android:title="Remembrance" />
+            android:id="@+id/nav_volunteer"
+            android:icon="@android:drawable/ic_menu_myplaces"
+            android:title="@string/nav_volunteer" />
     </group>
 </menu>

@@ -3,22 +3,30 @@ package vcmsa.projects.chocui
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
-import android.widget.Button
-import androidx.appcompat.app.AppCompatActivity
-import vcmsa.projects.chocui.R
+import com.google.android.material.appbar.MaterialToolbar
+import com.google.android.material.button.MaterialButton
 
-class VolunteerActivity : AppCompatActivity() {
+class VolunteerActivity : BaseActivity() {
 
     private val pdfUrl = "https://drive.google.com/uc?export=download&id=1KSgPfQRS-rzEcaZWNLWgikhW1mu-S7hz"
-
     private val emailAddress = "CHOCvolunteer@choc.org.za"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_volunteer)
 
-        val downloadBtn: Button = findViewById(R.id.downloadBtn)
-        val emailBtn: Button = findViewById(R.id.emailBtn)
+        // Set up the toolbar
+        val toolbar = findViewById<MaterialToolbar>(R.id.topAppBar)
+        setSupportActionBar(toolbar)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.setHomeAsUpIndicator(R.drawable.ic_menu)
+
+        // Setup navigation drawer
+        setupNavigationDrawer()
+
+        // Set up buttons
+        val downloadBtn: MaterialButton = findViewById(R.id.downloadBtn)
+        val emailBtn: MaterialButton = findViewById(R.id.emailBtn)
 
         downloadBtn.setOnClickListener {
             val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse(pdfUrl))

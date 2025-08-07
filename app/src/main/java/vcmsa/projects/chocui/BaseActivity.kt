@@ -14,19 +14,26 @@ open class BaseActivity : AppCompatActivity(), NavigationView.OnNavigationItemSe
     protected lateinit var toggle: ActionBarDrawerToggle
 
     protected fun setupNavigationDrawer() {
-        drawerLayout = findViewById(R.id.drawer_layout)
-        val navigationView = findViewById<NavigationView>(R.id.nav_view)
-        navigationView.setNavigationItemSelectedListener(this)
+        try {
+            drawerLayout = findViewById(R.id.drawer_layout)
+            val navigationView = findViewById<NavigationView>(R.id.nav_view)
+            val toolbar = findViewById<androidx.appcompat.widget.Toolbar>(R.id.topAppBar)
+            
+            navigationView.setNavigationItemSelectedListener(this)
 
-        toggle = ActionBarDrawerToggle(
-            this,
-            drawerLayout,
-            findViewById(R.id.topAppBar),
-            R.string.navigation_drawer_open,
-            R.string.navigation_drawer_close
-        )
-        drawerLayout.addDrawerListener(toggle)
-        toggle.syncState()
+            toggle = ActionBarDrawerToggle(
+                this,
+                drawerLayout,
+                toolbar,
+                R.string.navigation_drawer_open,
+                R.string.navigation_drawer_close
+            )
+
+            drawerLayout.addDrawerListener(toggle)
+            toggle.syncState()
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
@@ -40,17 +47,45 @@ open class BaseActivity : AppCompatActivity(), NavigationView.OnNavigationItemSe
             }
         }
 
-        when (item.itemId) {
-            R.id.nav_home -> startActivityIfNotCurrent(MainActivity::class.java)
-            R.id.nav_about -> startActivityIfNotCurrent(AboutUsActivity::class.java)
-            R.id.nav_contacts -> startActivityIfNotCurrent(ContactsActivity::class.java)
-            R.id.nav_donate -> startActivityIfNotCurrent(DonationsActivity::class.java)
-            R.id.nav_events -> startActivityIfNotCurrent(EventsActivity::class.java)
-            R.id.nav_remembrance -> startActivityIfNotCurrent(RemembranceActivity::class.java)
+        val handled = when (item.itemId) {
+            R.id.nav_home -> {
+                startActivityIfNotCurrent(MainActivity::class.java)
+                true
+            }
+            R.id.nav_about -> {
+                startActivityIfNotCurrent(AboutUsActivity::class.java)
+                true
+            }
+            R.id.nav_contacts -> {
+                startActivityIfNotCurrent(ContactsActivity::class.java)
+                true
+            }
+            R.id.nav_donate -> {
+                startActivityIfNotCurrent(DonationsActivity::class.java)
+                true
+            }
+            R.id.nav_events -> {
+                startActivityIfNotCurrent(EventsActivity::class.java)
+                true
+            }
+            R.id.nav_volunteer -> {
+                startActivityIfNotCurrent(VolunteerActivity::class.java)
+                true
+            }
+            else -> false
         }
 
-        drawerLayout.closeDrawer(GravityCompat.START)
-        return true
+        if (handled) {
+            drawerLayout.closeDrawer(GravityCompat.START)
+        }
+        return handled
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        if (toggle.onOptionsItemSelected(item)) {
+            return true
+        }
+        return super.onOptionsItemSelected(item)
     }
 
     override fun onBackPressed() {

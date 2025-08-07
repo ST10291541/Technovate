@@ -4,8 +4,6 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import androidx.activity.enableEdgeToEdge
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import com.google.android.material.appbar.MaterialToolbar
 
 class MainActivity : BaseActivity() {
@@ -19,8 +17,7 @@ class MainActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.home_layout)
 
         // Set up the toolbar
         val toolbar = findViewById<MaterialToolbar>(R.id.topAppBar)
@@ -28,7 +25,10 @@ class MainActivity : BaseActivity() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setHomeAsUpIndicator(R.drawable.ic_menu)
 
-        // Set up the navigation drawer
+        // Find drawer layout before setting up navigation
+        drawerLayout = findViewById(R.id.drawer_layout)
+        
+        // Setup navigation drawer
         setupNavigationDrawer()
 
         // Initialize buttons
@@ -62,11 +62,6 @@ class MainActivity : BaseActivity() {
 
         btnVolunteer.setOnClickListener {
             startActivity(Intent(this, VolunteerActivity::class.java))
-        }
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
         }
     }
 }

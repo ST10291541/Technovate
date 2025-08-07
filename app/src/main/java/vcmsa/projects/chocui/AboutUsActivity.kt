@@ -7,16 +7,18 @@ import com.google.android.material.appbar.MaterialToolbar
 class AboutUsActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
         setContentView(R.layout.activity_about_us)
 
-
+        // Initialize toolbar
         val toolbar = findViewById<MaterialToolbar>(R.id.topAppBar)
         setSupportActionBar(toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setHomeAsUpIndicator(R.drawable.ic_menu)
 
-
+        // Find drawer layout before setting up navigation
+        drawerLayout = findViewById(R.id.drawer_layout)
+        
+        // Setup navigation drawer after drawer layout is initialized
         setupNavigationDrawer()
     }
 }
