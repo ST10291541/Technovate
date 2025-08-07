@@ -10,13 +10,13 @@ class AboutUsActivity : BaseActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_about_us)
 
-        // Set up the toolbar
+
         val toolbar = findViewById<MaterialToolbar>(R.id.topAppBar)
         setSupportActionBar(toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setHomeAsUpIndicator(R.drawable.ic_menu)
 
-        // Set up the navigation drawer
+
         setupNavigationDrawer()
     }
 }
