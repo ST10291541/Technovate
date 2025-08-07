@@ -48,10 +48,6 @@ class MainActivity : BaseActivity() {
             startActivity(Intent(this, DonationsActivity::class.java))
         }
 
-        btnVolunteer.setOnClickListener {
-            startActivity(Intent(this, VolunteerActivity::class.java))
-        }
-
         btnInfo.setOnClickListener {
             startActivity(Intent(this, InformationActivity::class.java))
         }
@@ -64,6 +60,9 @@ class MainActivity : BaseActivity() {
             startActivity(Intent(this, ContactsActivity::class.java))
         }
 
+        btnVolunteer.setOnClickListener {
+            startActivity(Intent(this, VolunteerActivity::class.java))
+        }
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)

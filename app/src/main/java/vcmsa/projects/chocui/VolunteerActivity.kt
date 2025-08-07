@@ -1,9 +1,12 @@
+package vcmsa.projects.chocui
+
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import vcmsa.projects.chocui.R
+
 class VolunteerActivity : AppCompatActivity() {
 
     private val pdfUrl = "https://drive.google.com/uc?export=download&id=1KSgPfQRS-rzEcaZWNLWgikhW1mu-S7hz"
