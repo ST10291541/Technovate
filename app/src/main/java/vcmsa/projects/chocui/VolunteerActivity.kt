@@ -3,6 +3,7 @@ package vcmsa.projects.chocui
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
+import android.widget.Button
 import com.google.android.material.appbar.MaterialToolbar
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -11,6 +12,7 @@ class VolunteerActivity : BaseActivity() {
 
     private val pdfUrl = "https://drive.google.com/uc?export=download&id=1KSgPfQRS-rzEcaZWNLWgikhW1mu-S7hz"
     private val emailAddress = "CHOCvolunteer@choc.org.za"
+    private lateinit var btnContact: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -44,6 +46,14 @@ class VolunteerActivity : BaseActivity() {
                 )
             }
             startActivity(Intent.createChooser(intent, "Send Email"))
+        }
+
+        btnContact = findViewById(R.id.contactButton)
+
+
+        // Set up click listeners
+        btnContact.setOnClickListener {
+            startActivity(Intent(this, ContactsActivity::class.java))
         }
 
         findViewById<FloatingActionButton>(R.id.fabChat).setOnClickListener {
