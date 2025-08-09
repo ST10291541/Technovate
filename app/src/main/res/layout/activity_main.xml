@@ -145,7 +145,7 @@
                             android:background="@drawable/rounded_button" />
                     </LinearLayout>
 
-                    <!-- Info Button -->
+                    <!-- Bot Button -->
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
@@ -159,15 +159,15 @@
                         <ImageView
                             android:layout_width="60dp"
                             android:layout_height="60dp"
-                            android:src="@drawable/info_icon"
-                            android:contentDescription="Information"
+                            android:src="@drawable/bot"
+                            android:contentDescription="Chatbot"
                             android:layout_marginBottom="8dp"/>
 
                         <Button
-                            android:id="@+id/infoButton"
+                            android:id="@+id/btnChat"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Learn More"
+                            android:text="Chat to bot"
                             android:backgroundTint="#9C27B0"
                             android:textColor="#FFFFFF"
                             android:background="@drawable/rounded_button" />

@@ -7,7 +7,7 @@ import com.google.android.material.appbar.MaterialToolbar
 
 class MainActivity : BaseActivity() {
 
-    private lateinit var btnInfo: Button
+    private lateinit var btnChat: Button
     private lateinit var btnEvents: Button
 
 
@@ -28,13 +28,13 @@ class MainActivity : BaseActivity() {
         setupNavigationDrawer()
 
         // Initialize visible buttons
-        btnInfo = findViewById(R.id.infoButton)
+        btnChat = findViewById(R.id.btnChat)
         btnEvents = findViewById(R.id.eventsButton)
 
 
         // Set up click listeners
-        btnInfo.setOnClickListener {
-            startActivity(Intent(this, InformationActivity::class.java))
+        btnChat.setOnClickListener {
+            startActivity(Intent(this, Chatbot::class.java))
         }
 
         btnEvents.setOnClickListener {

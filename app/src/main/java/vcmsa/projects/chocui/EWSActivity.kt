@@ -16,8 +16,5 @@ class EWSActivity : AppCompatActivity() {
 
         btnBack = findViewById(R.id.btnBack)
 
-        btnBack.setOnClickListener {
-            startActivity(Intent(this, InformationActivity::class.java))
-        }
     }
 }
