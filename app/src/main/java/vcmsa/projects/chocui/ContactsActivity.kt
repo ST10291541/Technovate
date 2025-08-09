@@ -5,6 +5,7 @@ import android.net.Uri
 import android.os.Bundle
 import com.google.android.material.appbar.MaterialToolbar
 import com.google.android.material.button.MaterialButton
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class ContactsActivity : BaseActivity() {
 
@@ -43,6 +44,10 @@ class ContactsActivity : BaseActivity() {
                 data = Uri.parse("https://www.facebook.com/CHOC.Childhood.Cancer.Foundation/")
             }
             startActivity(intent)
+        }
+
+        findViewById<FloatingActionButton>(R.id.fabChat).setOnClickListener {
+            startActivity(Intent(this, Chatbot::class.java))
         }
     }
 }

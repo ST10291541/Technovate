@@ -5,6 +5,7 @@ import android.net.Uri
 import android.os.Bundle
 import com.google.android.material.appbar.MaterialToolbar
 import com.google.android.material.button.MaterialButton
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class VolunteerActivity : BaseActivity() {
 
@@ -43,6 +44,10 @@ class VolunteerActivity : BaseActivity() {
                 )
             }
             startActivity(Intent.createChooser(intent, "Send Email"))
+        }
+
+        findViewById<FloatingActionButton>(R.id.fabChat).setOnClickListener {
+            startActivity(Intent(this, Chatbot::class.java))
         }
     }
 }

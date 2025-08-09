@@ -6,6 +6,7 @@ import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import com.google.android.material.appbar.MaterialToolbar
 import com.google.android.material.button.MaterialButton
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class DonationsActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -28,6 +29,10 @@ class DonationsActivity : BaseActivity() {
             val url = "https://choc.org.za/donate-to-choc/"
             val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
             startActivity(intent)
+        }
+
+        findViewById<FloatingActionButton>(R.id.fabChat).setOnClickListener {
+            startActivity(Intent(this, Chatbot::class.java))
         }
     }
 }
