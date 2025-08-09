@@ -36,17 +36,6 @@
                 android:padding="24dp"
                 android:gravity="center_horizontal">
 
-                <!-- "About us ?" Title -->
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="About us ?"
-                    android:textSize="24sp"
-                    android:textStyle="bold"
-                    android:textColor="#2056B1"
-                    android:layout_marginTop="16dp"
-                    android:gravity="center" />
-
                 <!-- CHOC Logo -->
                 <ImageView
                     android:layout_width="200dp"
