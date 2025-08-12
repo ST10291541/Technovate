@@ -13,44 +13,14 @@
     <string name="nav_events">Events</string>
     <string name="nav_contacts">Contact Us</string>
 
-    <!-- Cancer-->
-    <string name="Cancer_Label">What is Cancer?</string>
-    <string name="Cancer_Info">Cancer is the disease of cells. Cells are building blocks of organs and tissue of the body. Cancer begins when the cell or cells begin to multiply and grow without control. These cancerous cells stop working properly and as their number increases, they form a lump or tumor. Should it not be treated in time, the cancerous cells take over the normal cells.</string>
-    <string name="Cancer_Info2">Childhood cancers are different to adults in that they tend to occur in the child\'s organs, they look different under a microscope and respond differently to treatment as it is more favorable. Cure rates for childhood cancer is much higher than in adults.</string>
-
-    <!-- Blood-->
-    <string name="Blood_Label">Blood Disorders</string>
-    <string name="Blood_Info">The central portion of flat bones and vertebrae is filled with red spongy tissue called bone marrow which is the factory of blood cells. When bone marrow fails to produce blood cells, that is called aplastic anaemia or bone marrow failure. This lack of cells results in pancytopaenia which is when all three blood cell types are decreased.</string>
-    <string name="Blood_Info2">Anaemia:\n • The lack of red blood cells causes weakness, tiredness, breathlessness, and a pale appearance.\n • Usually measured as haemoglobin levels.\n\nPlatelets:\n • Low platelets cause easy bruising, nose and gum bleeding, and can cause serious internal bleeding.\n • The most serious internal bleed is bleeding in the brain.\n\nWhite Blood Cells:\n • Low white blood cells result in the body being unable to fight infections.\n • Causes unexplained fevers.</string>
-    <string name="Blood_Info3">Anaemia is a sign/symptom of the lack of red blood cells and has many causes, but it is not a diagnosis.\n • Bone marrow infiltration (e.g. leukemia) affects red blood cell production.\n • Bone marrow failure may affect all cells (aplastic anaemia) or only red blood cells (red cell aplasia).\n • Iron deficiency is the most common cause and found in early stages of childhood under the age of 6.\n • Destruction of red blood cells in the blood and spleen (haemolytic anaemia) causes jaundice (yellow eyes) with anaemia.\n • Chronic blood loss.</string>
-
-    <!-- Brain Tumor -->
-    <string name="Brain_Label">Brain Tumor</string>
-    <string name="Brain_Info">Brain tumors occur when abnormal cells form within the brain. There are two main types of tumors: malignant (cancerous) tumors and benign (non-cancerous) tumors. The symptoms of brain tumors depend on their size, type, and location. Common symptoms include headaches, seizures, problems with vision, vomiting, and mental changes.</string>
-
-    <!-- Leukemia -->
-    <string name="Leukemia_Label">Leukemia</string>
-    <string name="Leukemia_Info">Leukemia is cancer of the blood-forming tissues, usually the bone marrow. It causes large numbers of abnormal blood cells to be produced and enter the bloodstream. There are several types of leukemia, and treatment depends on the type and other factors.</string>
-
-    <!-- Lymphoma -->
-    <string name="Lymphoma_Label">Lymphoma</string>
-    <string name="Lymphoma_Info">Lymphoma is cancer that begins in infection-fighting cells of the immune system, called lymphocytes. These cells are in the lymph nodes, spleen, thymus, bone marrow, and other parts of the body. There are two main types: Hodgkin\'s lymphoma and non-Hodgkin\'s lymphoma.</string>
-
-    <!-- Sarcoma -->
-    <string name="Sarcoma_Label">Sarcoma</string>
-    <string name="Sarcoma_Info">Sarcoma is a type of cancer that begins in bone or soft tissues of the body, including muscle, fat, blood vessels, nerves, tendons, and the lining of joints. There are many types of sarcoma, and treatment options depend on the type, location, and other factors.</string>
-
-    <!-- Wilms Tumor -->
-    <string name="Wilms_Label">Wilms Tumor</string>
-    <string name="Wilms_Info">Wilms tumor is a rare kidney cancer that primarily affects children. Also known as nephroblastoma, it\'s the most common cancer of the kidneys in children. Wilms tumor most often affects children ages 3 to 4 and becomes less common after age 5.</string>
-
     <!-- Contact -->
     <string name="contacts_title">Contact Us</string>
     <string name="contact_info_title">Contact Information</string>
     <string name="phone_number">031 240 2917</string>
     <string name="email_address">dbn@choc.org.za</string>
     <string name="physical_address_title">Physical Address</string>
-    <string name="physical_address">Inkosi Albert Luthuli Central Hospital\nLower Block A Residential Village\n800 Vusi Mzemela Road\nCato Manor, Durban 4091</string>
+    <string name="physical_address_dbn">Durban:\nInkosi Albert Luthuli Central Hospital\nLower Block A Residential Village\n800 Vusi Mzemela Road\nCato Manor, Durban 4091\n</string>
+    <string name="physical_address_pmb">PMB:\n29 Carnoustie Road\nChase Valley Heights\nPietermaritzburg\n3201</string>
     <string name="banking_details_title">Banking Details</string>
     <string name="bank_name">CHOC KZN\nStandard Bank Killarney\nAccount No: 241 319 978\nBranch Code: 007205</string>
     <string name="social_media_title">Social Media</string>

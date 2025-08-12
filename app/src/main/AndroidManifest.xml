@@ -22,37 +22,10 @@
             android:name=".DonationsActivity"
             android:exported="false" />
         <activity
-            android:name=".SarcomaActivity"
-            android:exported="false" />
-        <activity
-            android:name=".WilmsActivity"
-            android:exported="false" />
-        <activity
-            android:name=".LymphomaActivity"
-            android:exported="false" />
-        <activity
-            android:name=".BrainActivity"
-            android:exported="false" />
-        <activity
-            android:name=".LeukemiaActivity"
-            android:exported="false" />
-        <activity
             android:name=".VolunteerActivity"
             android:exported="false" />
         <activity
             android:name=".EWSActivity"
-            android:exported="false" />
-        <activity
-            android:name=".TypesActivity"
-            android:exported="false" />
-        <activity
-            android:name=".BloodActivity"
-            android:exported="false" />
-        <activity
-            android:name=".CancerActivity"
-            android:exported="false" />
-        <activity
-            android:name=".InformationActivity"
             android:exported="false" />
         <activity
             android:name=".ContactsActivity"

@@ -18,7 +18,7 @@
                 android:id="@+id/topAppBar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
-                android:background="?attr/colorPrimary"
+                android:background="@color/primary"
                 app:title="@string/contacts_title"
                 style="@style/Widget.Material3.Toolbar" />
 
@@ -60,7 +60,9 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/phone_number"
+                            android:textColor="@color/primaryVariant"
                             app:icon="@android:drawable/ic_menu_call"
+                            app:iconTint="@color/primaryVariant"
                             style="@style/Widget.Material3.Button.TextButton.Icon"/>
 
                         <com.google.android.material.button.MaterialButton
@@ -68,7 +70,9 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/email_address"
+                            android:textColor="@color/primaryVariant"
                             app:icon="@android:drawable/ic_dialog_email"
+                            app:iconTint="@color/primaryVariant"
                             style="@style/Widget.Material3.Button.TextButton.Icon"/>
 
                     </LinearLayout>
@@ -98,7 +102,12 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="@string/physical_address"
+                            android:text="@string/physical_address_dbn"
+                            android:textAppearance="?attr/textAppearanceBodyMedium"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/physical_address_pmb"
                             android:textAppearance="?attr/textAppearanceBodyMedium"/>
 
                     </LinearLayout>
@@ -159,7 +168,9 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Facebook"
+                            android:textColor="@color/primaryVariant"
                             app:icon="@android:drawable/ic_menu_share"
+                            app:iconTint="@color/primaryVariant"
                             style="@style/Widget.Material3.Button.TextButton.Icon"/>
 
                     </LinearLayout>
