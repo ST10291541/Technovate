@@ -1,12 +1,22 @@
 package vcmsa.projects.chocui
 
+import android.content.Intent
+import android.graphics.Color
+import android.net.Uri
+import android.text.SpannableString
+import android.text.Spanned
+import android.text.method.LinkMovementMethod
+import android.text.style.ClickableSpan
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.GridLayout
 import android.widget.TextView
+import android.widget.Toast
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.button.MaterialButton
 
 class Adapter(
     private val messages: MutableList<Message>,
@@ -73,28 +83,87 @@ class Adapter(
         private val optionContainer: GridLayout = itemView.findViewById(R.id.optionContainer)
 
         fun bind(message: Message) {
-            botText.text = message.text
-            optionContainer.removeAllViews()
+            val text = message.text ?: ""
+            val spannable = SpannableString(text)
 
+            // Phone numbers
+            val phonePattern = Regex("""\b\d{9,12}\b""")
+            phonePattern.findAll(text).forEach { matchResult ->
+                val start = matchResult.range.first
+                val end = matchResult.range.last + 1
+                val phoneNumber = matchResult.value.replace("\\s".toRegex(), "")
+
+                val clickableSpan = object : ClickableSpan() {
+                    override fun onClick(widget: View) {
+                        try {
+                            val intent = Intent(Intent.ACTION_DIAL).apply {
+                                data = Uri.parse("tel:$phoneNumber")
+                            }
+                            widget.context.startActivity(intent)
+                        } catch (e: Exception) {
+                            Toast.makeText(widget.context, "Cannot make calls here", Toast.LENGTH_SHORT).show()
+                        }
+                    }
+                }
+                spannable.setSpan(clickableSpan, start, end, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
+            }
+
+            // Emails
+            val emailPattern = Regex("""[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}""")
+            emailPattern.findAll(text).forEach { matchResult ->
+                val start = matchResult.range.first
+                val end = matchResult.range.last + 1
+                val email = matchResult.value
+
+                val clickableSpan = object : ClickableSpan() {
+                    override fun onClick(widget: View) {
+                        try {
+                            val intent = Intent(Intent.ACTION_SENDTO).apply {
+                                data = Uri.parse("mailto:$email")
+                            }
+                            if (intent.resolveActivity(widget.context.packageManager) != null) {
+                                widget.context.startActivity(intent)
+                            } else {
+                                Toast.makeText(widget.context, "No email app installed", Toast.LENGTH_SHORT).show()
+                            }
+                        } catch (e: Exception) {
+                            Toast.makeText(widget.context, "Cannot send email here", Toast.LENGTH_SHORT).show()
+                        }
+                    }
+                }
+                spannable.setSpan(clickableSpan, start, end, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
+            }
+
+            // Apply text with clickable spans
+            botText.text = spannable
+            botText.movementMethod = LinkMovementMethod.getInstance()
+
+            // Handle options buttons
+            optionContainer.removeAllViews()
             if (!message.options.isNullOrEmpty()) {
                 optionContainer.visibility = View.VISIBLE
                 optionContainer.columnCount = 3
+                optionContainer.alignmentMode = GridLayout.ALIGN_BOUNDS
+                optionContainer.useDefaultMargins = true
 
                 message.options.forEach { option ->
                     val button = Button(itemView.context).apply {
-                        text = option
+                        this.text = option
                         textSize = 14f
-                        setTextColor(itemView.context.getColor(android.R.color.black))
-                        setBackgroundColor(itemView.context.getColor(R.color.blue))
+                        setTextColor(Color.BLACK)
+                        backgroundTintList = ContextCompat.getColorStateList(context, R.color.blue)
                         setOnClickListener { onOptionClicked(option) }
-                        layoutParams = GridLayout.LayoutParams().apply {
-                            width = 0
-                            height = 120
-                            columnSpec = GridLayout.spec(GridLayout.UNDEFINED, 1f)
-                            setMargins(8, 8, 8, 8)
-                        }
                         isAllCaps = false
                     }
+
+                    val params = GridLayout.LayoutParams().apply {
+                        width = 0
+                        height = 120
+                        columnSpec = GridLayout.spec(GridLayout.UNDEFINED, 1f)
+                        setMargins(8, 8, 8, 8)
+                        setGravity(android.view.Gravity.FILL)
+                    }
+                    button.layoutParams = params
                     optionContainer.addView(button)
                 }
             } else {

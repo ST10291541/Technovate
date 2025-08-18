@@ -31,7 +31,6 @@ class MainActivity : BaseActivity() {
         btnChat = findViewById(R.id.btnChat)
         btnEvents = findViewById(R.id.eventsButton)
 
-
         // Set up click listeners
         btnChat.setOnClickListener {
             startActivity(Intent(this, Chatbot::class.java))
