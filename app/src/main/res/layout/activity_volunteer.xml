@@ -96,7 +96,7 @@
                         android:id="@+id/contactImage"
                         android:layout_width="80dp"
                         android:layout_height="80dp"
-                        android:src="@drawable/contact_icon"
+                        android:src="@drawable/gold_ribbon_new"
                         android:layout_gravity="center_vertical"
                         android:layout_marginEnd="12dp"
                         android:contentDescription="Contact Icon" />
