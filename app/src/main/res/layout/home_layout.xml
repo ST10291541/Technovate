@@ -159,7 +159,7 @@
                     android:id="@+id/chocMascot"
                     android:layout_width="match_parent"
                     android:layout_height="450dp"
-                    android:src="@drawable/choc_cow"
+                    android:src="@drawable/cows_logo_new"
                     android:scaleType="centerCrop"
                     android:contentDescription="CHOC Mascot"
                     android:layout_marginBottom="32dp" /> <!-- Increased spacing -->
