@@ -20,7 +20,7 @@
                 android:id="@+id/topAppBar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
-                android:background="?attr/colorPrimary"
+                android:background="@color/primary"
                 app:title="Volunteer Registration"
                 style="@style/Widget.Material3.Toolbar" />
 
@@ -96,7 +96,7 @@
                         android:id="@+id/contactImage"
                         android:layout_width="80dp"
                         android:layout_height="80dp"
-                        android:src="@drawable/contact_icon"
+                        android:src="@drawable/gold_ribbon_new"
                         android:layout_gravity="center_vertical"
                         android:layout_marginEnd="12dp"
                         android:contentDescription="Contact Icon" />
