@@ -40,7 +40,7 @@
                 <ImageView
                     android:layout_width="200dp"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/choc_logo"
+                    android:src="@drawable/choc_logo2"
                     android:contentDescription="CHOC Logo"
                     android:layout_marginTop="16dp"
                     android:adjustViewBounds="true" />
@@ -85,7 +85,7 @@
                 <ImageView
                     android:layout_width="64dp"
                     android:layout_height="64dp"
-                    android:src="@drawable/gold_ribbon"
+                    android:src="@drawable/gold_ribbon_new"
                     android:contentDescription="Gold Ribbon"
                     android:layout_marginTop="24dp"
                     android:layout_gravity="end" />

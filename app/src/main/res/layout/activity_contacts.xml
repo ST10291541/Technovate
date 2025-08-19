@@ -104,11 +104,24 @@
                             android:layout_height="wrap_content"
                             android:text="@string/physical_address_dbn"
                             android:textAppearance="?attr/textAppearanceBodyMedium"/>
+
+                        <com.google.android.gms.maps.MapView
+                            android:id="@+id/mapDbn"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:contentDescription="Durban Map" />
+
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/physical_address_pmb"
                             android:textAppearance="?attr/textAppearanceBodyMedium"/>
+
+                        <com.google.android.gms.maps.MapView
+                            android:id="@+id/mapPmb"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:contentDescription="PMB Map" />
 
                     </LinearLayout>
 

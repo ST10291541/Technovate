@@ -12,11 +12,12 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.GridLayout
+import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
-import com.google.android.material.button.MaterialButton
+import com.bumptech.glide.Glide
 
 class Adapter(
     private val messages: MutableList<Message>,
@@ -63,13 +64,11 @@ class Adapter(
 
     override fun getItemCount(): Int = messages.size
 
-    // Your existing addMessage function
     fun addMessage(message: Message) {
         messages.add(message)
         notifyItemInserted(messages.size - 1)
     }
 
-    // Existing UserViewHolder (no change)
     inner class UserViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         private val userText: TextView = itemView.findViewById(R.id.userMessage)
         fun bind(message: Message) {
@@ -77,7 +76,6 @@ class Adapter(
         }
     }
 
-    // Existing BotViewHolder (no change)
     inner class BotViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         private val botText: TextView = itemView.findViewById(R.id.botMessage)
         private val optionContainer: GridLayout = itemView.findViewById(R.id.optionContainer)
@@ -128,6 +126,31 @@ class Adapter(
                             }
                         } catch (e: Exception) {
                             Toast.makeText(widget.context, "Cannot send email here", Toast.LENGTH_SHORT).show()
+                        }
+                    }
+                }
+                spannable.setSpan(clickableSpan, start, end, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
+            }
+
+            val addressPattern = Regex("""(?m)(🏥.*|[0-9]{1,5}\s+\w+.*(?:Street|Road|Avenue|Hospital|City|Town|Village).*)""")
+            addressPattern.findAll(text).forEach { matchResult ->
+                val start = matchResult.range.first
+                val end = matchResult.range.last + 1
+                val address = matchResult.value.trim()
+
+                val clickableSpan = object : ClickableSpan() {
+                    override fun onClick(widget: View) {
+                        try {
+                            val uri = Uri.parse("geo:0,0?q=${Uri.encode(address)}")
+                            val intent = Intent(Intent.ACTION_VIEW, uri)
+                            intent.setPackage("com.google.android.apps.maps")
+                            if (intent.resolveActivity(widget.context.packageManager) != null) {
+                                widget.context.startActivity(intent)
+                            } else {
+                                Toast.makeText(widget.context, "Google Maps not installed", Toast.LENGTH_SHORT).show()
+                            }
+                        } catch (e: Exception) {
+                            Toast.makeText(widget.context, "Cannot open maps here", Toast.LENGTH_SHORT).show()
                         }
                     }
                 }
