@@ -82,7 +82,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="⚠️ Important Disclaimer"
+                android:text="Important Disclaimer:"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 android:textColor="#D32F2F"
@@ -91,7 +91,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Always check with your child's healthcare team before introducing new foods, especially during treatment."
+                android:text="Consult your child's healthcare expert before introducing new foods, particularly during treatment."
                 android:textSize="14sp"
                 android:textColor="#D32F2F"
                 android:lineSpacingMultiplier="1.3" />
@@ -224,7 +224,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="✅ Do's and ❌ Don'ts for Food and Nutrition"
+            android:text="What to be aware of for Food and Nutrition"
             android:textSize="20sp"
             android:textStyle="bold"
             android:textColor="#2E7D32"
@@ -357,34 +357,6 @@
                 android:lineSpacingMultiplier="1.3" />
         </LinearLayout>
 
-        <!-- Call to Action -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:gravity="center"
-            android:background="@drawable/rounded_header"
-            android:padding="24dp">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="📱 Available in CHOC App"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                android:textColor="#2E7D32"
-                android:gravity="center"
-                android:layout_marginBottom="12dp" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="• Snack of the Day Widget\n• Do's and Don'ts Quick Tips\n• Filter by Symptom"
-                android:textSize="14sp"
-                android:textColor="#555555"
-                android:gravity="center"
-                android:lineSpacingMultiplier="1.3" />
-        </LinearLayout>
 
     </LinearLayout>
 </ScrollView>
