@@ -2,15 +2,19 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <uses-permission android:name="android.permission.CALL_PHONE"/>
-    <uses-feature android:name="android.hardware.telephony" android:required="false"/>
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <meta-data
         android:name="com.google.android.geo.API_KEY"
-        android:value="AIzaSyC4q85aLNS0fhw7CTeSKxT1ZrIedXwBPj4"/>
+        android:value="AIzaSyC4q85aLNS0fhw7CTeSKxT1ZrIedXwBPj4" />
 
     <application
         android:allowBackup="true"
@@ -22,6 +26,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CHOCUI"
         tools:targetApi="31">
+
         <activity
             android:name=".Chatbot"
             android:exported="false" />
@@ -34,9 +39,9 @@
         <activity
             android:name=".VolunteerActivity"
             android:exported="false" />
-        <activity
+        <!-- <activity
             android:name=".EWSActivity"
-            android:exported="false" />
+            android:exported="false" /> -->
         <activity
             android:name=".ContactsActivity"
             android:exported="false" />
