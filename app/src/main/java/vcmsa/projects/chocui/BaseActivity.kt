@@ -72,6 +72,10 @@ open class BaseActivity : AppCompatActivity(), NavigationView.OnNavigationItemSe
                 startActivityIfNotCurrent(VolunteerActivity::class.java)
                 true
             }
+            R.id.nav_nutrition -> {
+                startActivityIfNotCurrent(NutritionActivity::class.java)
+                true
+            }
             else -> false
         }
 

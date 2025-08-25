@@ -22,11 +22,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CHOCUI"
         tools:targetApi="31">
-
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyC4q85aLNS0fhw7CTeSKxT1ZrIedXwBPj4" />
 
+        <activity
+            android:name=".NutritionActivity"
+            android:exported="false" />
         <activity
             android:name=".Chatbot"
             android:exported="false" />
