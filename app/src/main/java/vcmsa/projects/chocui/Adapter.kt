@@ -7,6 +7,7 @@ import android.text.SpannableString
 import android.text.Spanned
 import android.text.method.LinkMovementMethod
 import android.text.style.ClickableSpan
+import android.util.TypedValue
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -172,18 +173,29 @@ class Adapter(
                 message.options.forEach { option ->
                     val button = Button(itemView.context).apply {
                         this.text = option
-                        textSize = 14f
+                        textSize = 16f // sp → scales with user font settings
                         setTextColor(Color.BLACK)
                         backgroundTintList = ContextCompat.getColorStateList(context, R.color.blue)
                         setOnClickListener { onOptionClicked(option) }
                         isAllCaps = false
                     }
 
+                    val metrics = itemView.context.resources.displayMetrics
+
                     val params = GridLayout.LayoutParams().apply {
                         width = 0
-                        height = 120
+                        height = TypedValue.applyDimension(
+                            TypedValue.COMPLEX_UNIT_DIP,
+                            80f, // Material standard button height
+                            metrics
+                        ).toInt()
                         columnSpec = GridLayout.spec(GridLayout.UNDEFINED, 1f)
-                        setMargins(8, 8, 8, 8)
+                        setMargins(
+                            TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 6f, metrics).toInt(),
+                            TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 6f, metrics).toInt(),
+                            TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 6f, metrics).toInt(),
+                            TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 6f, metrics).toInt()
+                        )
                         setGravity(android.view.Gravity.FILL)
                     }
                     button.layoutParams = params
