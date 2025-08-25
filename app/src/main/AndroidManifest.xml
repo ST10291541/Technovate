@@ -12,10 +12,6 @@
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
-    <meta-data
-        android:name="com.google.android.geo.API_KEY"
-        android:value="AIzaSyC4q85aLNS0fhw7CTeSKxT1ZrIedXwBPj4" />
-
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -26,6 +22,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CHOCUI"
         tools:targetApi="31">
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyC4q85aLNS0fhw7CTeSKxT1ZrIedXwBPj4" />
 
         <activity
             android:name=".Chatbot"
@@ -39,9 +39,6 @@
         <activity
             android:name=".VolunteerActivity"
             android:exported="false" />
-        <!-- <activity
-            android:name=".EWSActivity"
-            android:exported="false" /> -->
         <activity
             android:name=".ContactsActivity"
             android:exported="false" />
