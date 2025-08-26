@@ -4,12 +4,13 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import com.google.android.material.appbar.MaterialToolbar
+import com.google.android.material.card.MaterialCardView
 
 class MainActivity : BaseActivity() {
 
-    private lateinit var btnChat: Button
-    private lateinit var btnEvents: Button
-
+    private lateinit var cardGetInvolved: MaterialCardView
+    private lateinit var cardGetToKnowUs: MaterialCardView
+    private lateinit var cardCancerInfo: MaterialCardView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,19 +28,22 @@ class MainActivity : BaseActivity() {
         // Setup navigation drawer
         setupNavigationDrawer()
 
-        // Initialize visible buttons
-        btnChat = findViewById(R.id.btnChat)
-        btnEvents = findViewById(R.id.eventsButton)
+        // Initialize navigation cards
+        cardGetInvolved = findViewById(R.id.cardGetInvolved)
+        cardGetToKnowUs = findViewById(R.id.cardGetToKnowUs)
+        cardCancerInfo = findViewById(R.id.cardCancerInfo)
 
-        // Set up click listeners
-        btnChat.setOnClickListener {
+        // Set click listeners for cards
+        cardGetInvolved.setOnClickListener {
+            startActivity(Intent(this, VolunteerActivity::class.java))
+        }
+
+        cardGetToKnowUs.setOnClickListener {
+            startActivity(Intent(this, AboutUsActivity::class.java))
+        }
+
+        cardCancerInfo.setOnClickListener {
             startActivity(Intent(this, Chatbot::class.java))
         }
-
-        btnEvents.setOnClickListener {
-            startActivity(Intent(this, EventsActivity::class.java))
-        }
-
-
     }
 }

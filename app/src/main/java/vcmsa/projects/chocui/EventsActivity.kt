@@ -4,8 +4,11 @@ import vcmsa.projects.chocui.R
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.view.View
 import android.widget.Button
+import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.appbar.MaterialToolbar
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
@@ -36,5 +39,30 @@ class EventsActivity : BaseActivity() {
         findViewById<FloatingActionButton>(R.id.fabChat).setOnClickListener {
             startActivity(Intent(this, Chatbot::class.java))
         }
+
+        //CHANGE IMAGES
+        //CHECK THEIR FACEBOOK
+        val images = listOf(
+            R.drawable.kids,
+            R.drawable.anaemia,
+            R.drawable.symptoms
+        )
+
+        val adapter = ImageSliderAdapter(images)
+        val viewPager: ViewPager2 = findViewById(R.id.imageSlider)
+        viewPager.adapter = adapter
+
+// Optional: auto-scroll
+        val handler = Handler(Looper.getMainLooper())
+        val runnable = object : Runnable {
+            var currentPosition = 0
+            override fun run() {
+                if(currentPosition == images.size) currentPosition = 0
+                viewPager.currentItem = currentPosition++
+                handler.postDelayed(this, 5000) // change every 5 seconds
+            }
+        }
+        handler.post(runnable)
+
     }
 }
