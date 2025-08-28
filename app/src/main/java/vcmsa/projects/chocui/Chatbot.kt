@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import android.widget.EditText
+import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -12,6 +13,7 @@ class Chatbot : AppCompatActivity() {
     private lateinit var chatRecyclerView: RecyclerView
     private lateinit var messageInput: EditText
     private lateinit var chatAdapter: Adapter
+    private lateinit var closeButton: ImageButton
 
     private val messages = mutableListOf<Message>()
 
@@ -21,6 +23,7 @@ class Chatbot : AppCompatActivity() {
 
         chatRecyclerView = findViewById(R.id.chatRecyclerView)
         messageInput = findViewById(R.id.messageInput)
+        closeButton = findViewById(R.id.closeButton)
 
         chatAdapter = Adapter(messages) { option ->
             addUserMessage(option)
@@ -29,6 +32,12 @@ class Chatbot : AppCompatActivity() {
 
         chatRecyclerView.layoutManager = LinearLayoutManager(this)
         chatRecyclerView.adapter = chatAdapter
+
+        // Close chatbot & return to main
+        closeButton.setOnClickListener {
+            finish() // closes Chatbot activity & returns to MainActivity
+        }
+
 
         // Start conversation
         addBotMessage(
