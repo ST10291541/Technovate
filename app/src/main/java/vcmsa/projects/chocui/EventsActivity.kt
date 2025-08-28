@@ -43,9 +43,9 @@ class EventsActivity : BaseActivity() {
         //CHANGE IMAGES
         //CHECK THEIR FACEBOOK
         val images = listOf(
-            R.drawable.kids,
-            R.drawable.anaemia,
-            R.drawable.symptoms
+            R.drawable.chocevents1,
+            R.drawable.chocevents2,
+            R.drawable.chocevents3
         )
 
         val adapter = ImageSliderAdapter(images)
