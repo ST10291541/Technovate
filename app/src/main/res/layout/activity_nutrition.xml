@@ -145,71 +145,19 @@
                     android:layout_marginBottom="20dp"
                     android:fontStyle="italic" />
 
-                <!-- Symptom Tabs (Placeholders for actual TabLayout) -->
-                <LinearLayout
+                <!-- Symptom Tabs -->
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/tabLayout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginBottom="20dp"
-                    android:gravity="center">
+                    android:layout_marginBottom="16dp"
+                    app:tabMode="scrollable" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Nausea"
-                        android:background="@drawable/tab_background"
-                        android:padding="12dp"
-                        android:layout_margin="4dp"
-                        android:textColor="#FFFFFF"
-                        android:backgroundTint="#FF9800" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Mouth Sores"
-                        android:background="@drawable/tab_background"
-                        android:padding="12dp"
-                        android:layout_margin="4dp"
-                        android:textColor="#FFFFFF"
-                        android:backgroundTint="#2196F3" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Low Appetite"
-                        android:background="@drawable/tab_background"
-                        android:padding="12dp"
-                        android:layout_margin="4dp"
-                        android:textColor="#FFFFFF"
-                        android:backgroundTint="#4CAF50" />
-                </LinearLayout>
-
-                <!-- Sample Symptom Content -->
-                <LinearLayout
+                <androidx.viewpager2.widget.ViewPager2
+                    android:id="@+id/viewPager"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:background="@drawable/rounded_card"
-                    android:padding="20dp"
-                    android:layout_marginBottom="24dp">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="For Nausea / Upset Stomach"
-                        android:textSize="18sp"
-                        android:textStyle="bold"
-                        android:textColor="#FF9800"
-                        android:layout_marginBottom="12dp" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="• Dry crackers or plain toast (easy on the stomach)\n• Ginger rooibos tea (gentle, helps with nausea)\n• Cold fruit smoothies (banana + pawpaw + yogurt, avoid citrus)\n• Plain mashed potatoes with a drizzle of olive oil\n• Rice porridge with soft vegetables or chicken broth"
-                        android:textSize="14sp"
-                        android:textColor="#333333"
-                        android:lineSpacingMultiplier="1.3" />
-                </LinearLayout>
+                    android:layout_height="300dp"
+                    android:layout_marginBottom="24dp" />
 
                 <!-- Do's & Don'ts Section -->
                 <TextView
@@ -294,59 +242,18 @@
                     android:textColor="#2E7D32"
                     android:layout_marginBottom="16dp" />
 
-                <!-- Breakfast Options -->
-                <LinearLayout
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/mealTabLayout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:background="@drawable/rounded_card"
-                    android:padding="16dp"
-                    android:layout_marginBottom="16dp">
+                    android:layout_marginBottom="16dp"
+                    app:tabMode="scrollable" />
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="✅ Breakfast Options"
-                        android:textSize="16sp"
-                        android:textStyle="bold"
-                        android:textColor="#FF9800"
-                        android:layout_marginBottom="12dp" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="1. Oats with mashed banana\n2. Soft mielie pap with milk and butter\n3. Scrambled eggs on soft bread\n4. Smoothie bowl\n5. French toast (mild)\n6. Mashed avocado on soft brown bread\n7. Mini pumpkin muffins"
-                        android:textSize="14sp"
-                        android:textColor="#333333"
-                        android:lineSpacingMultiplier="1.3" />
-                </LinearLayout>
-
-                <!-- Main Meal Ideas -->
-                <LinearLayout
+                <androidx.viewpager2.widget.ViewPager2
+                    android:id="@+id/mealViewPager"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:background="@drawable/rounded_card"
-                    android:padding="16dp"
-                    android:layout_marginBottom="24dp">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="✅ Main Meal Ideas"
-                        android:textSize="16sp"
-                        android:textStyle="bold"
-                        android:textColor="#2196F3"
-                        android:layout_marginBottom="12dp" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="• Soft chicken stew\n• Maize meal porridge (pap)\n• Fish cakes\n• Mild soups\n• Macaroni and cheese\n• Creamy butternut and sweet potato soup\n• Steamed pumpkin with soft pap"
-                        android:textSize="14sp"
-                        android:textColor="#333333"
-                        android:lineSpacingMultiplier="1.3" />
-                </LinearLayout>
+                    android:layout_height="300dp"
+                    android:layout_marginBottom="24dp" />
 
             </LinearLayout>
         </ScrollView>

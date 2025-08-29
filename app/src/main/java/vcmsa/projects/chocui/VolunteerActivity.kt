@@ -12,7 +12,7 @@ class VolunteerActivity : BaseActivity() {
 
     private val pdfUrl = "https://drive.google.com/uc?export=download&id=1KSgPfQRS-rzEcaZWNLWgikhW1mu-S7hz"
     private val emailAddress = "CHOCvolunteer@choc.org.za"
-    private lateinit var btnContact: Button
+    private lateinit var btnContact: MaterialButton
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

@@ -91,24 +91,6 @@
                     android:layout_marginTop="24dp"
                     android:layout_gravity="end" />
 
-                <!-- What We Offer (Big Blue Text) -->
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="What We Offer:"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    android:textColor="#2056B1"
-                    android:layout_marginTop="32dp" />
-
-                <!-- Services List -->
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="• Professional emotional support\n• Emotional support\n• Accommodation close to treatment centres\n• Transport to and from treatment centres\n• Support groups (including parent supporting parent groups)\n• CHOC interactive learning programme and other activities run by volunteers\n• Transport assistance to ensure every child and caregiver can return for treatment\n• Nutritional support"
-                    android:textSize="16sp"
-                    android:layout_marginTop="8dp"
-                    android:textColor="#000000" />
 
                 <!-- CHOC Programmes Section -->
                 <TextView
