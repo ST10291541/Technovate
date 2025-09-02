@@ -10,7 +10,7 @@ import java.io.BufferedReader
 import java.io.InputStreamReader
 import kotlin.random.Random
 
-class RemembranceWallActivity : AppCompatActivity() {
+class RemembranceWallActivity : BaseActivity() {
 
     private lateinit var names: List<String>
     private lateinit var starContainer: FrameLayout
@@ -28,6 +28,8 @@ class RemembranceWallActivity : AppCompatActivity() {
         starContainer.post {
             addStars()
         }
+
+        setupNavigationDrawer()
     }
 
     private fun addStars() {

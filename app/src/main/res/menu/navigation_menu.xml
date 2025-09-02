@@ -30,5 +30,15 @@
             android:id="@+id/nav_nutrition"
             android:icon="@android:drawable/ic_menu_agenda"
             android:title="@string/nav_nutrition" />
+
+        <item
+            android:id="@+id/nav_videos"
+            android:icon="@drawable/ic_video"
+            android:title="Educational Videos" />
+
+        <item
+            android:id="@+id/nav_remembrance_wall"
+            android:icon="@android:drawable/ic_menu_day"
+            android:title="Rememberance Wall" />
     </group>
 </menu>

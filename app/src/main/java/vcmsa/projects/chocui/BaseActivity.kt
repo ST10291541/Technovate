@@ -76,6 +76,14 @@ open class BaseActivity : AppCompatActivity(), NavigationView.OnNavigationItemSe
                 startActivityIfNotCurrent(NutritionActivity::class.java)
                 true
             }
+            R.id.nav_videos -> {
+                startActivityIfNotCurrent(VideosActivity::class.java)
+                true
+            }
+            R.id.nav_remembrance_wall -> {
+                startActivityIfNotCurrent(RemembranceWallActivity::class.java)
+                true
+            }
             else -> false
         }
 

@@ -22,6 +22,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CHOCUI"
         tools:targetApi="31">
+        <activity
+            android:name=".VideosActivity"
+            android:exported="false" />
+
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyC4q85aLNS0fhw7CTeSKxT1ZrIedXwBPj4" />
