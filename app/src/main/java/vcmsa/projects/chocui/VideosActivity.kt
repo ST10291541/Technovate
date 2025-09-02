@@ -8,9 +8,13 @@ import androidx.recyclerview.widget.RecyclerView
 class VideosActivity : BaseActivity() {
 
     private val videoList = listOf(
-        Video("Blood Disorders", "JrJ6UJOlg2g", "An overview of types of blood disorders related to childhood cancer"),
-        Video("What is cancer", "ToJ7lioWayo", "What is cancer?"),
-        Video("Types of Caner", "W73YT2vLz44", "Different types of cancers"),
+        Video("Early Warning Signs", "cHtRlUNY_qE", "Learn about the early signs and symptoms of childhood cancer that parents should watch for"),
+        Video("Keemo gets a port", "YucfqAxBONc&t=3s", "Join Keemo as he gets a port implanted to make his treatment journey easier and less painful"),
+        Video("Keemo goes home", "jxm4xP5w5Vk", "Follow Keemo's emotional journey as he returns home from the hospital during treatment"),
+        Video("Keemo goes to the doctor", "V1tvnxLa-iw", "See what happens during Keemo's doctor visits and how medical teams care for children with cancer"),
+        Video("Keemo loses his hair", "PpkVnXqjNps", "A gentle explanation of why hair loss happens during treatment and how Keemo copes with this change"),
+        Video("Keemo starts treatment", "Hi4rS4ppJVI", "Follow Keemo as he begins his cancer treatment journey and meets his healthcare team"),
+        Video("Keemo feels pain", "nKZcR00PnfE", "Learn how Keemo and his medical team manage pain and discomfort during cancer treatment")
     )
 
 
