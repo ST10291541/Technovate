@@ -294,11 +294,12 @@
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|end"
             android:layout_margin="24dp"
-            android:contentDescription="Chat with us"
-            app:srcCompat="@drawable/ic_chat"
-            app:backgroundTint="@color/primary"
-            app:tint="@android:color/white"
+            android:contentDescription="Go to Dashboard"
+            app:srcCompat="@drawable/bot_face"
+            android:backgroundTint="#87CEFA"
             app:elevation="8dp" />
+
+
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
