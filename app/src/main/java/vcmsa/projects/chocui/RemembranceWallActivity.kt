@@ -9,7 +9,7 @@ import org.json.JSONArray
 import java.io.BufferedReader
 import java.io.InputStreamReader
 
-class RemembranceWallActivity : BaseActivity() {
+class RemembranceWallActivity : AppCompatActivity() {
 
     private lateinit var remembranceGrid: GridLayout
     private val namesList = mutableListOf<String>()
@@ -40,8 +40,6 @@ class RemembranceWallActivity : BaseActivity() {
         } catch (e: Exception) {
             e.printStackTrace()
         }
-
-        setupNavigationDrawer()
     }
 
     private fun displayStars() {
