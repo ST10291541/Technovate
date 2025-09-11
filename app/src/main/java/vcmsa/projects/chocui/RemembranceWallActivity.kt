@@ -1,75 +1,66 @@
 package vcmsa.projects.chocui
 
 import android.os.Bundle
-import android.widget.FrameLayout
+import android.widget.GridLayout
 import android.widget.ImageView
-import androidx.appcompat.app.AlertDialog
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import org.json.JSONObject
+import org.json.JSONArray
 import java.io.BufferedReader
 import java.io.InputStreamReader
-import kotlin.random.Random
 
 class RemembranceWallActivity : AppCompatActivity() {
 
-    private lateinit var names: List<String>
-    private lateinit var starContainer: FrameLayout
+    private lateinit var remembranceGrid: GridLayout
+    private val namesList = mutableListOf<String>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_remembrance_wall)
 
-        starContainer = findViewById(R.id.starContainer)
+        remembranceGrid = findViewById(R.id.remembranceGrid)
 
-        // Load names from JSON file
-        names = loadNamesFromJson()
+        // Load names from JSON
+        loadNamesFromJson()
 
-        // Wait until layout is drawn so we know width/height
-        starContainer.post {
-            addStars()
+        // Display stars
+        displayStars()
+    }
+
+    private fun loadNamesFromJson() {
+        try {
+            val inputStream = assets.open("names.json")
+            val bufferedReader = BufferedReader(InputStreamReader(inputStream))
+            val jsonString = bufferedReader.use { it.readText() }
+
+            val jsonArray = JSONArray(jsonString)
+            for (i in 0 until jsonArray.length()) {
+                namesList.add(jsonArray.getString(i))
+            }
+        } catch (e: Exception) {
+            e.printStackTrace()
         }
     }
 
-    private fun addStars() {
-        val containerWidth = starContainer.width
-        val containerHeight = starContainer.height
+    private fun displayStars() {
+        remembranceGrid.removeAllViews()
 
-        names.forEach { name ->
-            val star = ImageView(this).apply {
-                setImageResource(android.R.drawable.btn_star_big_on) // Star icon
-                layoutParams = FrameLayout.LayoutParams(80, 80) // Size of star
-
-                // Random position
-                x = Random.nextInt(containerWidth - 100).toFloat()
-                y = Random.nextInt(containerHeight - 100).toFloat()
-
-                setOnClickListener {
-                    AlertDialog.Builder(this@RemembranceWallActivity)
-                        .setTitle("Remembrance")
-                        .setMessage(name)
-                        .setPositiveButton("Close", null)
-                        .show()
-                }
+        for (name in namesList) {
+            val star = ImageView(this)
+            star.setImageResource(android.R.drawable.btn_star_big_on)
+            star.adjustViewBounds = true
+            star.layoutParams = GridLayout.LayoutParams().apply {
+                width = 140
+                height = 140
             }
 
-            starContainer.addView(star)
+            // Show name when clicked
+            star.setOnClickListener {
+                Toast.makeText(this, name, Toast.LENGTH_SHORT).show()
+            }
+
+            remembranceGrid.addView(star)
         }
-    }
-
-    private fun loadNamesFromJson(): List<String> {
-        val inputStream = assets.open("remembrance.json")
-        val reader = BufferedReader(InputStreamReader(inputStream))
-        val jsonString = reader.readText()
-        reader.close()
-
-        val jsonObject = JSONObject(jsonString)
-        val jsonArray = jsonObject.getJSONArray("names")
-
-        val nameList = mutableListOf<String>()
-        for (i in 0 until jsonArray.length()) {
-            nameList.add(jsonArray.getString(i))
-        }
-        return nameList
     }
 }
 
