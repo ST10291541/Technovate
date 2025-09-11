@@ -4,12 +4,11 @@ import android.os.Bundle
 import android.widget.GridLayout
 import android.widget.ImageView
 import android.widget.Toast
-import androidx.appcompat.app.AppCompatActivity
 import org.json.JSONArray
 import java.io.BufferedReader
 import java.io.InputStreamReader
 
-class RemembranceWallActivity : AppCompatActivity() {
+class RemembranceWallActivity : BaseActivity() {
 
     private lateinit var remembranceGrid: GridLayout
     private val namesList = mutableListOf<String>()
