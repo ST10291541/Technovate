@@ -252,7 +252,7 @@
                 <androidx.viewpager2.widget.ViewPager2
                     android:id="@+id/mealViewPager"
                     android:layout_width="match_parent"
-                    android:layout_height="300dp"
+                    android:layout_height="400dp"
                     android:layout_marginBottom="24dp" />
 
             </LinearLayout>
