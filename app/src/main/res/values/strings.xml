@@ -12,6 +12,8 @@
     <string name="nav_info">Information</string>
     <string name="nav_events">Events</string>
     <string name="nav_contacts">Contact Us</string>
+    <string name="nav_nutrition">Nutrition</string>
+    <string name="remembrance_wall_title">Remembrance Wall</string>
 
     <!-- Contact -->
     <string name="contacts_title">Contact Us</string>

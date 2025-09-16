@@ -91,24 +91,6 @@
                     android:layout_marginTop="24dp"
                     android:layout_gravity="end" />
 
-                <!-- What We Offer (Big Blue Text) -->
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="What We Offer:"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    android:textColor="#2056B1"
-                    android:layout_marginTop="32dp" />
-
-                <!-- Services List -->
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="• Professional emotional support\n• Emotional support\n• Accommodation close to treatment centres\n• Transport to and from treatment centres\n• Support groups (including parent supporting parent groups)\n• CHOC interactive learning programme and other activities run by volunteers\n• Transport assistance to ensure every child and caregiver can return for treatment\n• Nutritional support"
-                    android:textSize="16sp"
-                    android:layout_marginTop="8dp"
-                    android:textColor="#000000" />
 
                 <!-- CHOC Programmes Section -->
                 <TextView
@@ -139,7 +121,7 @@
                         app:layout_columnWeight="1"
                         app:layout_rowWeight="1"
                         app:layout_gravity="fill"
-                        android:layout_margin="8dp"
+                        android:layout_margin="6dp"
                         app:cardCornerRadius="8dp"
                         app:cardElevation="4dp">
 
@@ -147,25 +129,25 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="vertical"
-                            android:padding="16dp">
+                            android:padding="12dp">
 
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="Accommodation"
-                                android:textSize="16sp"
+                                android:textSize="15sp"
                                 android:textStyle="bold"
                                 android:textColor="#2056B1"
-                                android:drawablePadding="8dp"
+                                android:drawablePadding="6dp"
                                 android:drawableStart="@drawable/ic_accommodation" />
 
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="Safe housing near treatment centers for families during their child's cancer treatment."
-                                android:textSize="14sp"
+                                android:textSize="12sp"
                                 android:textColor="#666666"
-                                android:layout_marginTop="8dp"
+                                android:layout_marginTop="6dp"
                                 android:lineSpacingMultiplier="1.2" />
 
                         </LinearLayout>
@@ -178,7 +160,7 @@
                         app:layout_columnWeight="1"
                         app:layout_rowWeight="1"
                         app:layout_gravity="fill"
-                        android:layout_margin="8dp"
+                        android:layout_margin="6dp"
                         app:cardCornerRadius="8dp"
                         app:cardElevation="4dp">
 
@@ -186,25 +168,25 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="vertical"
-                            android:padding="16dp">
+                            android:padding="12dp">
 
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="Transport"
-                                android:textSize="16sp"
+                                android:textSize="15sp"
                                 android:textStyle="bold"
                                 android:textColor="#2056B1"
-                                android:drawablePadding="8dp"
+                                android:drawablePadding="6dp"
                                 android:drawableStart="@drawable/ic_transport" />
 
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="Transportation services to ensure children can attend medical appointments and treatments."
-                                android:textSize="14sp"
+                                android:textSize="12sp"
                                 android:textColor="#666666"
-                                android:layout_marginTop="8dp"
+                                android:layout_marginTop="6dp"
                                 android:lineSpacingMultiplier="1.2" />
 
                         </LinearLayout>
@@ -217,7 +199,7 @@
                         app:layout_columnWeight="1"
                         app:layout_rowWeight="1"
                         app:layout_gravity="fill"
-                        android:layout_margin="8dp"
+                        android:layout_margin="6dp"
                         app:cardCornerRadius="8dp"
                         app:cardElevation="4dp">
 
@@ -225,25 +207,25 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="vertical"
-                            android:padding="16dp">
+                            android:padding="12dp">
 
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="Emotional Support"
-                                android:textSize="16sp"
+                                android:textSize="15sp"
                                 android:textStyle="bold"
                                 android:textColor="#2056B1"
-                                android:drawablePadding="8dp"
+                                android:drawablePadding="6dp"
                                 android:drawableStart="@drawable/ic_emotional_support" />
 
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="Counseling and support services for children and families coping with cancer diagnosis and treatment."
-                                android:textSize="14sp"
+                                android:textSize="12sp"
                                 android:textColor="#666666"
-                                android:layout_marginTop="8dp"
+                                android:layout_marginTop="6dp"
                                 android:lineSpacingMultiplier="1.2" />
 
                         </LinearLayout>
@@ -256,7 +238,7 @@
                         app:layout_columnWeight="1"
                         app:layout_rowWeight="1"
                         app:layout_gravity="fill"
-                        android:layout_margin="8dp"
+                        android:layout_margin="6dp"
                         app:cardCornerRadius="8dp"
                         app:cardElevation="4dp">
 
@@ -264,25 +246,25 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="vertical"
-                            android:padding="16dp">
+                            android:padding="12dp">
 
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="Practical Support"
-                                android:textSize="16sp"
+                                android:textSize="15sp"
                                 android:textStyle="bold"
                                 android:textColor="#2056B1"
-                                android:drawablePadding="8dp"
+                                android:drawablePadding="6dp"
                                 android:drawableStart="@drawable/ic_practical_support" />
 
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="Assistance with daily needs including meals, household tasks, and navigating the healthcare system."
-                                android:textSize="14sp"
+                                android:textSize="12sp"
                                 android:textColor="#666666"
-                                android:layout_marginTop="8dp"
+                                android:layout_marginTop="6dp"
                                 android:lineSpacingMultiplier="1.2" />
 
                         </LinearLayout>
@@ -295,7 +277,7 @@
                         app:layout_columnWeight="1"
                         app:layout_rowWeight="1"
                         app:layout_gravity="fill"
-                        android:layout_margin="8dp"
+                        android:layout_margin="6dp"
                         app:cardCornerRadius="8dp"
                         app:cardElevation="4dp">
 
@@ -303,25 +285,25 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="vertical"
-                            android:padding="16dp">
+                            android:padding="12dp">
 
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="Awareness and Advocacy"
-                                android:textSize="16sp"
+                                android:textSize="15sp"
                                 android:textStyle="bold"
                                 android:textColor="#2056B1"
-                                android:drawablePadding="8dp"
+                                android:drawablePadding="6dp"
                                 android:drawableStart="@drawable/ic_awareness" />
 
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="Raising public awareness about childhood cancer and advocating for policies that support affected families."
-                                android:textSize="14sp"
+                                android:textSize="12sp"
                                 android:textColor="#666666"
-                                android:layout_marginTop="8dp"
+                                android:layout_marginTop="6dp"
                                 android:lineSpacingMultiplier="1.2" />
 
                         </LinearLayout>
@@ -334,7 +316,7 @@
                         app:layout_columnWeight="1"
                         app:layout_rowWeight="1"
                         app:layout_gravity="fill"
-                        android:layout_margin="8dp"
+                        android:layout_margin="6dp"
                         app:cardCornerRadius="8dp"
                         app:cardElevation="4dp">
 
@@ -342,25 +324,25 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="vertical"
-                            android:padding="16dp">
+                            android:padding="12dp">
 
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="Education"
-                                android:textSize="16sp"
+                                android:textSize="15sp"
                                 android:textStyle="bold"
                                 android:textColor="#2056B1"
-                                android:drawablePadding="8dp"
+                                android:drawablePadding="6dp"
                                 android:drawableStart="@drawable/ic_education" />
 
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="Educational resources and support to help children continue learning during treatment and recovery."
-                                android:textSize="14sp"
+                                android:textSize="12sp"
                                 android:textColor="#666666"
-                                android:layout_marginTop="8dp"
+                                android:layout_marginTop="6dp"
                                 android:lineSpacingMultiplier="1.2" />
 
                         </LinearLayout>
@@ -373,7 +355,7 @@
                         app:layout_columnWeight="1"
                         app:layout_rowWeight="1"
                         app:layout_gravity="fill"
-                        android:layout_margin="8dp"
+                        android:layout_margin="6dp"
                         app:cardCornerRadius="8dp"
                         app:cardElevation="4dp">
 
@@ -381,25 +363,25 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="vertical"
-                            android:padding="16dp">
+                            android:padding="12dp">
 
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="Get Involved"
-                                android:textSize="16sp"
+                                android:textSize="15sp"
                                 android:textStyle="bold"
                                 android:textColor="#2056B1"
-                                android:drawablePadding="8dp"
+                                android:drawablePadding="6dp"
                                 android:drawableStart="@drawable/ic_get_involved" />
 
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="Opportunities for volunteers, donors, and partners to support CHOC's mission and make a difference."
-                                android:textSize="14sp"
+                                android:textSize="12sp"
                                 android:textColor="#666666"
-                                android:layout_marginTop="8dp"
+                                android:layout_marginTop="6dp"
                                 android:lineSpacingMultiplier="1.2" />
 
                         </LinearLayout>
@@ -412,7 +394,7 @@
                         app:layout_columnWeight="1"
                         app:layout_rowWeight="1"
                         app:layout_gravity="fill"
-                        android:layout_margin="8dp"
+                        android:layout_margin="6dp"
                         app:cardCornerRadius="8dp"
                         app:cardElevation="4dp">
 
@@ -420,25 +402,25 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="vertical"
-                            android:padding="16dp">
+                            android:padding="12dp">
 
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="Collaboration"
-                                android:textSize="16sp"
+                                android:textSize="15sp"
                                 android:textStyle="bold"
                                 android:textColor="#2056B1"
-                                android:drawablePadding="8dp"
+                                android:drawablePadding="6dp"
                                 android:drawableStart="@drawable/ic_collaboration" />
 
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="Partnerships with healthcare providers, organizations, and communities to enhance support services."
-                                android:textSize="14sp"
+                                android:textSize="12sp"
                                 android:textColor="#666666"
-                                android:layout_marginTop="8dp"
+                                android:layout_marginTop="6dp"
                                 android:lineSpacingMultiplier="1.2" />
 
                         </LinearLayout>

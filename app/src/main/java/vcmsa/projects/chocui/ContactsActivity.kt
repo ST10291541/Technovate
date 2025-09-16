@@ -5,6 +5,7 @@ import android.net.Uri
 import android.os.Bundle
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.MapView
+import com.google.android.gms.maps.MapsInitializer
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
 import com.google.android.material.appbar.MaterialToolbar
@@ -19,6 +20,8 @@ class ContactsActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_contacts)
+
+        MapsInitializer.initialize(this, MapsInitializer.Renderer.LATEST, null)
 
         // Set up the toolbar
         val toolbar = findViewById<MaterialToolbar>(R.id.topAppBar)
@@ -50,8 +53,8 @@ class ContactsActivity : BaseActivity() {
         mapPmb = findViewById(R.id.mapPmb)
 
         // Must call onCreate() for each MapView
-        mapDbn.onCreate(savedInstanceState)
-        mapPmb.onCreate(savedInstanceState)
+        mapDbn.onCreate(savedInstanceState?.getBundle("mapDbnBundle"))
+        mapPmb.onCreate(savedInstanceState?.getBundle("mapPmbBundle"))
 
         mapDbn.getMapAsync { googleMap ->
             val durban = LatLng(-29.8579, 31.0292) // Durban co-ordinates
@@ -105,7 +108,19 @@ class ContactsActivity : BaseActivity() {
 
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
-        mapDbn.onSaveInstanceState(outState)
-        mapPmb.onSaveInstanceState(outState)
+
+        var mapDbnBundle = outState.getBundle("mapDbnBundle")
+        if (mapDbnBundle == null) {
+            mapDbnBundle = Bundle()
+            outState.putBundle("mapDbnBundle", mapDbnBundle)
+        }
+        mapDbn.onSaveInstanceState(mapDbnBundle)
+
+        var mapPmbBundle = outState.getBundle("mapPmbBundle")
+        if (mapPmbBundle == null) {
+            mapPmbBundle = Bundle()
+            outState.putBundle("mapPmbBundle", mapPmbBundle)
+        }
+        mapPmb.onSaveInstanceState(mapPmbBundle)
     }
 }

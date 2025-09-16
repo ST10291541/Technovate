@@ -33,9 +33,21 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:padding="16dp">
+                android:padding="16dp"
+                android:layout_marginTop="28dp">
 
-                <!-- Events content will be added here -->
+                <!-- Image Slider -->
+                <androidx.viewpager2.widget.ViewPager2
+                    android:id="@+id/imageSlider"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:layout_marginBottom="16dp"
+                    android:clipToPadding="false"
+                    android:clipChildren="false"
+                    android:overScrollMode="never"
+                    android:layout_marginTop="28dp"/>
+
+                <!-- Events content -->
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -43,7 +55,9 @@
                     android:textSize="24sp"
                     android:textStyle="bold"
                     android:gravity="center"
-                    android:paddingBottom="26dp"/>
+                    android:paddingBottom="26dp"
+                    android:layout_marginTop="20dp"/>
+
                 <TextView
                     android:id="@+id/eventsDescription"
                     android:layout_width="match_parent"
@@ -102,4 +116,3 @@
         app:menu="@menu/navigation_menu" />
 
 </androidx.drawerlayout.widget.DrawerLayout>
-
