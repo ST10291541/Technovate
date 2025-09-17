@@ -176,7 +176,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:text="Email the completed form to CHOCvolunteer@choc.org.za"
+                                android:text="Email the completed form to dbn@choc.org"
                                 android:textSize="16sp"
                                 android:textColor="#333333"
                                 android:layout_marginStart="16dp"
