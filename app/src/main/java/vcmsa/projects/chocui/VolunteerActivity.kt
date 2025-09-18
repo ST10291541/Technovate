@@ -11,7 +11,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton
 class VolunteerActivity : BaseActivity() {
 
     private val pdfUrl = "https://drive.google.com/uc?export=download&id=1KSgPfQRS-rzEcaZWNLWgikhW1mu-S7hz"
-    private val emailAddress = "dbn@choc.org"
+    private val emailAddress = "dbn@choc.org.za"
     private lateinit var btnContact: MaterialButton
 
     override fun onCreate(savedInstanceState: Bundle?) {

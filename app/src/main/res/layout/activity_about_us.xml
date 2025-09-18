@@ -82,15 +82,27 @@
                     android:layout_marginTop="8dp"
                     android:textColor="#000000" />
 
-                <!-- Gold Ribbon -->
-                <ImageView
-                    android:layout_width="64dp"
-                    android:layout_height="64dp"
-                    android:src="@drawable/gold_ribbon_new"
-                    android:contentDescription="Gold Ribbon"
-                    android:layout_marginTop="24dp"
-                    android:layout_gravity="end" />
 
+                <!-- Founder Image -->
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:src="@drawable/choc_founder"
+                    android:layout_marginTop="32dp"
+                    android:scaleType="centerCrop"
+                    android:contentDescription="CHOC Founder" />
+
+                <!-- Founder Note -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Sister Sadie Cutland founded CHOC in 1979 after her daughter Hillary was diagnosed with aplastic anaemia. Her personal experience inspired the creation of a support group that has grown into South Africa's leading childhood cancer organization."
+                    android:textSize="14sp"
+                    android:textStyle="italic"
+                    android:textColor="#666666"
+                    android:gravity="center"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="16dp" />
 
                 <!-- CHOC Programmes Section -->
                 <TextView
@@ -114,7 +126,7 @@
                     android:padding="8dp"
                     tools:ignore="MissingClass">
 
-                    <!-- Accommodation Programme -->
+
                     <androidx.cardview.widget.CardView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
@@ -134,7 +146,7 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Accommodation"
+                                android:text="Housing"
                                 android:textSize="15sp"
                                 android:textStyle="bold"
                                 android:textColor="#2056B1"
@@ -275,7 +287,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         app:layout_columnWeight="1"
-                        app:layout_rowWeight="1"
+                        app:layoutRowWeight="1"
                         app:layout_gravity="fill"
                         android:layout_margin="6dp"
                         app:cardCornerRadius="8dp"
@@ -428,15 +440,6 @@
 
                 </androidx.gridlayout.widget.GridLayout>
 
-                <!-- Founder Image -->
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="200dp"
-                    android:src="@drawable/choc_founder"
-                    android:layout_marginTop="32dp"
-                    android:scaleType="centerCrop"
-                    android:contentDescription="CHOC Founder" />
-
                 <!-- Padding bottom for spacing -->
                 <View
                     android:layout_width="match_parent"
@@ -465,7 +468,17 @@
                 android:backgroundTint="#87CEFA"
                 app:tint="@android:color/white" />
 
+            <!-- Gold Ribbon -->
+            <ImageView
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:src="@drawable/gold_ribbon_new"
+                android:contentDescription="Gold Ribbon"
+                android:layout_marginTop="24dp"
+                android:layout_gravity="end" />
         </LinearLayout>
+
+
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
