@@ -2,64 +2,53 @@ package vcmsa.projects.chocui
 
 import android.os.Bundle
 import android.widget.GridLayout
-import android.widget.ImageView
 import android.widget.Toast
+import androidx.appcompat.widget.AppCompatTextView
 import org.json.JSONArray
-import java.io.BufferedReader
-import java.io.InputStreamReader
+import java.nio.charset.Charset
 
 class RemembranceWallActivity : BaseActivity() {
-
-    private lateinit var remembranceGrid: GridLayout
-    private val namesList = mutableListOf<String>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_remembrance_wall)
 
-        remembranceGrid = findViewById(R.id.remembranceGrid)
+        val gridLayout = findViewById<GridLayout>(R.id.remembranceGrid)
 
         // Load names from JSON
-        loadNamesFromJson()
+        val names = loadNamesFromJson()
 
-        // Display stars
-        displayStars()
-    }
+        // Create a heart for each name
+        for (name in names) {
+            val heartView = AppCompatTextView(this).apply {
+                text = "💙"
+                textSize = 32f
+                setTextColor(resources.getColor(android.R.color.holo_blue_light, theme))
+                setPadding(24, 24, 24, 24)
 
-    private fun loadNamesFromJson() {
-        try {
-            val inputStream = assets.open("names.json")
-            val bufferedReader = BufferedReader(InputStreamReader(inputStream))
-            val jsonString = bufferedReader.use { it.readText() }
-
-            val jsonArray = JSONArray(jsonString)
-            for (i in 0 until jsonArray.length()) {
-                namesList.add(jsonArray.getString(i))
+                setOnClickListener {
+                    Toast.makeText(this@RemembranceWallActivity, name, Toast.LENGTH_SHORT).show()
+                }
             }
-        } catch (e: Exception) {
-            e.printStackTrace()
+            gridLayout.addView(heartView)
         }
     }
 
-    private fun displayStars() {
-        remembranceGrid.removeAllViews()
+    private fun loadNamesFromJson(): List<String> {
+        val inputStream = assets.open("names.json")
+        val size = inputStream.available()
+        val buffer = ByteArray(size)
+        inputStream.read(buffer)
+        inputStream.close()
+        val json = String(buffer, Charset.forName("UTF-8"))
 
-        for (name in namesList) {
-            val star = ImageView(this)
-            star.setImageResource(android.R.drawable.btn_star_big_on)
-            star.adjustViewBounds = true
-            star.layoutParams = GridLayout.LayoutParams().apply {
-                width = 140
-                height = 140
-            }
-
-            // Show name when clicked
-            star.setOnClickListener {
-                Toast.makeText(this, name, Toast.LENGTH_SHORT).show()
-            }
-
-            remembranceGrid.addView(star)
+        val jsonArray = JSONArray(json)
+        val names = mutableListOf<String>()
+        for (i in 0 until jsonArray.length()) {
+            names.add(jsonArray.getString(i))
         }
+        return names
     }
 }
+
 
