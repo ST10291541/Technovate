@@ -8,6 +8,7 @@ import androidx.appcompat.widget.AppCompatTextView
 import org.json.JSONArray
 import org.json.JSONObject
 import java.io.InputStream
+import com.google.android.material.appbar.MaterialToolbar
 
 class RemembranceWallActivity : BaseActivity() {
 
@@ -16,6 +17,16 @@ class RemembranceWallActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_remembrance_wall)
+
+        // Set up the toolbar
+        val toolbar = findViewById<MaterialToolbar>(R.id.topAppBar)
+        setSupportActionBar(toolbar)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.setHomeAsUpIndicator(R.drawable.ic_menu)
+
+        // Set up the navigation drawer
+        setupNavigationDrawer()
+
 
         val gridLayout = findViewById<GridLayout>(R.id.remembranceGrid)
 

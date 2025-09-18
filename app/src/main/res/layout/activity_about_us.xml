@@ -445,6 +445,15 @@
                     android:layout_width="match_parent"
                     android:layout_height="48dp" />
 
+                <!-- Gold Ribbon -->
+                <ImageView
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:layout_gravity="start"
+                android:layout_marginTop="24dp"
+                android:contentDescription="Gold Ribbon"
+                android:src="@drawable/gold_ribbon_new" />
+
             </LinearLayout>
         </androidx.core.widget.NestedScrollView>
 
@@ -467,15 +476,6 @@
                 app:srcCompat="@drawable/bot_face"
                 android:backgroundTint="#87CEFA"
                 app:tint="@android:color/white" />
-
-            <!-- Gold Ribbon -->
-            <ImageView
-                android:layout_width="64dp"
-                android:layout_height="64dp"
-                android:src="@drawable/gold_ribbon_new"
-                android:contentDescription="Gold Ribbon"
-                android:layout_marginTop="24dp"
-                android:layout_gravity="end" />
         </LinearLayout>
 
 
