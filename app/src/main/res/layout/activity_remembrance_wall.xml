@@ -44,4 +44,16 @@
             android:useDefaultMargins="true" />
     </ScrollView>
 
+    <!-- TextView to display name in the center -->
+    <TextView
+        android:id="@+id/nameDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="24sp"
+        android:textColor="@android:color/white"
+        android:gravity="center"
+        android:visibility="gone"
+        android:layout_gravity="center" />
+
 </LinearLayout>

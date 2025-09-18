@@ -173,7 +173,7 @@ class Adapter(
                 message.options.forEach { option ->
                     val button = Button(itemView.context).apply {
                         this.text = option
-                        textSize = 16f // sp → scales with user font settings
+                        textSize = 14f // sp → scales with user font settings
                         setTextColor(Color.BLACK)
                         backgroundTintList = ContextCompat.getColorStateList(context, R.color.blue)
                         setOnClickListener { onOptionClicked(option) }
