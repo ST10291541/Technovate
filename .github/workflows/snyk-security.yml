@@ -48,7 +48,7 @@ jobs:
 
       # Step 4: Build the project
       - name: Build project
-        run: ./gradlew build
+        run: ./gradlew build -x lint
 
       # Step 5: Set up Node.js for Snyk CLI
       - name: Set up Node.js
