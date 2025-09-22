@@ -25,17 +25,18 @@ on:
 
 permissions:
   contents: read
+  security-events: write
 
 jobs:
   snyk:
     runs-on: ubuntu-latest
 
     steps:
-      # Step 1: Checkout the repository
+      # Step 1: Checkout repository
       - name: Checkout code
         uses: actions/checkout@v4
 
-      # Step 2: Set up JDK 17 for Android/Kotlin
+      # Step 2: Set up JDK 17 for Android
       - name: Set up JDK 17
         uses: actions/setup-java@v2
         with:
@@ -46,11 +47,11 @@ jobs:
       - name: Make Gradle wrapper executable
         run: chmod +x ./gradlew
 
-      # Step 4: Build the project
+      # Step 4: Build project (skip lint errors to avoid Android 13 NotificationPermission issue)
       - name: Build project
         run: ./gradlew build -x lint
 
-      # Step 5: Set up Node.js for Snyk CLI
+      # Step 5: Set up Node.js (required for Snyk CLI)
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
@@ -60,14 +61,14 @@ jobs:
       - name: Install Snyk CLI
         run: npm install -g snyk
 
-      # Step 7: Run Snyk test
-      - name: Run Snyk test
+      # Step 7: Run Snyk test and output SARIF
+      - name: Run Snyk test in SARIF format
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
-        run: snyk test --all-projects --json > snyk-output.json || true
+        run: snyk test --all-projects --sarif > snyk-output.sarif || true
 
-      # Step 8: Upload results to GitHub Code Scanning
+      # Step 8: Upload SARIF results to GitHub Code Scanning
       - name: Upload results to GitHub Code Scanning
         uses: github/codeql-action/upload-sarif@v3
         with:
-          sarif_file: snyk-output.json
+          sarif_file: snyk-output.sarif
