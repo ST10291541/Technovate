@@ -61,11 +61,11 @@ jobs:
       - name: Install Snyk CLI
         run: npm install -g snyk
 
-      # Step 7: Run Snyk test and output SARIF
+      # Step 7: Run Snyk test and output SARIF (stderr separated from stdout)
       - name: Run Snyk test in SARIF format
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
-        run: snyk test --all-projects --sarif > snyk-output.sarif || true
+        run: snyk test --all-projects --sarif 2>/dev/null > snyk-output.sarif || true
 
       # Step 8: Upload SARIF results to GitHub Code Scanning
       - name: Upload results to GitHub Code Scanning
