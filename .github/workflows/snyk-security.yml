@@ -18,6 +18,7 @@
 
 name: Snyk Security Test
 
+# Triggers: on pull request to main or manual run
 on:
   pull_request:
     branches: ["main"]
@@ -29,18 +30,41 @@ permissions:
 jobs:
   snyk:
     runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
 
-      - name: Set up Snyk CLI
-        uses: snyk/actions/setup@v1
+    steps:
+      # Step 1: Checkout the repository
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # Step 2: Set up Java (required for Android/Kotlin)
+      - name: Set up JDK 17
+        uses: actions/setup-java@v2
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      # Step 3: Build the project with Gradle
+      - name: Build project
+        run: ./gradlew build
+
+      # Step 4: Install Node.js (needed for Snyk CLI)
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      # Step 5: Install Snyk CLI
+      - name: Install Snyk CLI
+        run: npm install -g snyk
+
+      # Step 6: Run Snyk tests for your Android project
+      - name: Run Snyk test
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+        run: snyk test --all-projects --json > snyk-output.json || true
 
-      - name: Run Snyk Code scan
-        run: snyk code test --sarif > snyk-code.sarif || true
-
+      # Step 7: Upload Snyk results to GitHub Code Scanning
       - name: Upload results to GitHub Code Scanning
         uses: github/codeql-action/upload-sarif@v3
         with:
-          sarif_file: snyk-code.sarif
+          sarif_file: snyk-output.json
