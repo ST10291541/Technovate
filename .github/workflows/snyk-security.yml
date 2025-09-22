@@ -21,7 +21,7 @@ name: Snyk Security Test
 on:
   pull_request:
     branches: ["main"]
-  workflow_dispatch: # allows manual trigger
+  workflow_dispatch:
 
 permissions:
   contents: read
