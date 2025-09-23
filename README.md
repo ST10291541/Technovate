@@ -9,7 +9,7 @@ You will require the following in order to use this application:
 - Android Studio 2020.3 or later
 - Android SDK 29 or later
 - A device or emulator running Android 7.0 (Nougat) or later
-- Internet connection for accessing live content, chatbot, donations, and events
+- Internet connection for accessing youtube videos, events page and donations
 
 ---
 
