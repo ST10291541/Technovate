@@ -1,46 +1,50 @@
-CHOC KZN App
-Overview
-The CHOC Durban Childhood Cancer Information App is an Android application developed to serve as a comprehensive resource for users to learn about childhood cancer. The app is designed with the mission of raising awareness, educating the public, and supporting CHOC Durban’s initiatives through donations and volunteer engagement.
-Features
-Cancer Information Resource
-Provides reliable, easy-to-understand information about childhood cancer, including symptoms, treatment options, and general guidance.
-Awareness Content Delivery
-Shares educational content to inform users about childhood cancer and promote public awareness.
-Donor Engagement
-Enables users to make secure donations directly through the app, contributing to CHOC Durban’s mission.
-Volunteer Coordination
-Allows users to sign up as volunteers and participate in CHOC Durban’s programs and activities.
-Events Display
-Shows details of upcoming events organized by CHOC Durban, including dates, locations, and participation information.
-Contact and Support Information
-Provides CHOC Durban’s contact details and addresses for users seeking assistance or more information.
-Remembrance Page
-A dedicated page where users can click on blue hearts to view the names of children who have passed away, honoring their memory.
-Interactive Chatbot
-Offers an AI-powered chatbot that answers users’ common questions about childhood cancer. The chatbot is interactive and provides responses based on general FAQs.
-Target Audience
-General public seeking information about childhood cancer
-Potential donors and volunteers interested in supporting CHOC Durban
-Families and individuals affected by childhood cancer
-Technology Stack
-Platform: Android
-Development Environment: Android Studio
-Programming Language: Java / Kotlin (depending on implementation)
-Database & Backend: [Specify if using Firebase, SQLite, or other backend]
-AI/Chatbot: Rule-based interactive chatbot for FAQs
-Installation
-Clone the repository or download the APK.
-Open the project in Android Studio.
-Sync the project with Gradle files.
-Build and run the app on an Android device or emulator.
-Usage
-Navigate through the app using the bottom navigation menu.
-Access information, events, donations, and volunteer sign-up easily through dedicated sections.
-Use the remembrance page to honor children and the chatbot to ask questions about childhood cancer.
-Google Play Store Publication
-The app will be officially published on the Google Play Store for easy access to users:
-Users can download and install the app from the Play Store.
-The Play Store listing will include app description, screenshots, and ratings to help users understand the app’s features and purpose.
-Updates and bug fixes will be delivered automatically through the Play Store.
-Contribution
-This app is developed for CHOC Durban. Contributions for further development or content updates can be coordinated through the CHOC Durban development team.
+CHOC Durban Childhood Cancer Information App
+Angenalise Elisha Stephen - ST10291541
+1: Requirements
+You will require the following in order to use this application:
+Android Studio 2020.3 or later
+Android SDK 29 or later
+A device or emulator running Android 7.0 (Nougat) or later
+Internet connection for accessing live content, chatbot, donations, and events
+2: How to Apply / Install
+This is how the application can be installed and used:
+Download the source code from the GitHub repository.
+Open Android Studio and select Open an existing project, then locate the project folder.
+Sync the project with Gradle files to ensure all dependencies are downloaded.
+Build and run the application on an Android device or emulator.
+Alternatively, download the APK file (once published) and install it directly on an Android device.
+3: Functionality
+The following is how the application works:
+Cancer Information Resource: Users can access detailed and reliable information about childhood cancer, including symptoms, treatment, and general guidance.
+Awareness Content Delivery: Educational content is delivered to help users learn and spread awareness about childhood cancer.
+Donor Engagement: Users can make secure donations through the app, supporting CHOC Durban’s initiatives.
+Volunteer Coordination: Users can sign up to become volunteers and participate in CHOC Durban programs.
+Events Display: Displays upcoming events, including dates, locations, and participation details.
+Contact and Support Information: Provides CHOC Durban’s contact details for inquiries or support.
+Remembrance Page: Users can click on blue hearts to view the names of children who have passed away.
+Interactive Chatbot: A chatbot answers common FAQs about childhood cancer in an interactive way.
+4: Non-Functional Requirements
+These are how the system performs:
+Provides a stable and responsive environment with minimal downtime.
+Interactive chatbot ensures users receive helpful responses based on FAQs.
+Secure donation processing protects user information.
+User-friendly interface with intuitive navigation for all sections.
+Data storage ensures content persistence, including events, donations, and volunteer sign-ups.
+5: Credits
+This application was created by Angenalise Elisha Stephen - Student Number: ST10291541
+6: Change Log
+These are the changes and updates made:
+Added remembrance page with clickable blue hearts displaying names.
+Implemented interactive FAQ chatbot for cancer-related questions.
+Integrated secure donation functionality.
+Added volunteer sign-up and event display features.
+Optimized UI for accessibility and ease of navigation.
+7: Google Play Store
+The app will be published on the Google Play Store for public download.
+Users will be able to access the app easily, receive automatic updates, and view app ratings and screenshots.
+Play Store listing will include full description, screenshots, and other promotional content.
+8: GitHub Link
+CHOC Durban Childhood Cancer App Repository
+9: References
+CHOC Durban Official Website: https://www.choc.org.za
+Android Developers Documentation: https://developer.android.com
