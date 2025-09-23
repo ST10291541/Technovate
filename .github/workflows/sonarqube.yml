@@ -24,28 +24,29 @@
 # Feel free to take a look at our documentation (https://docs.sonarqube.org/latest/analysis/github-integration/)
 # or reach out to our community forum if you need some help (https://community.sonarsource.com/c/sq/10)
 
-name: SonarQube Analysis
+name: SonarCloud
 
 on:
   push:
-    branches: [ "main" ]
+    branches:
+      - main
   pull_request:
-    branches: [ "main" ]
+    branches:
+      - main
 
 jobs:
-  sonarqube:
+  sonarcloud:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: SonarQube Scan
-        uses: SonarSource/sonarqube-scan-action@v1.1.0
+      - name: SonarCloud Scan
+        uses: SonarSource/sonarcloud-github-action@master
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-          SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
         with:
           args: >
-            -Dsonar.projectKey=sqp_d674a73f7dbb6fd38e62818a26897279cf8d805d
+            -Dsonar.organization=${{ secrets.SONAR_ORG }}
+            -Dsonar.projectKey=${{ secrets.SONAR_PROJECT_KEY }}
             -Dsonar.sources=.
