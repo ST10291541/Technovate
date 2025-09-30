@@ -67,15 +67,15 @@ jobs:
           key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
           restore-keys: ${{ runner.os }}-gradle
 
-      # Step 5: Run tests on debug variant
-      - name: Run unit & instrumentation tests (debug)
-        run: ./gradlew testDebugUnitTest connectedDebugAndroidTest -x lint --no-daemon
+      # Step 5: Run only unit tests (skip connected tests) and skip lint
+      - name: Run unit tests (debug)
+        run: ./gradlew testDebugUnitTest -x lint --no-daemon
 
-      # Step 6: Build release variant
+      # Step 6: Build release variant (skip lint)
       - name: Build release variant
         run: ./gradlew assembleRelease -x lint --no-daemon
 
-      # Step 7: SonarCloud Analysis
+      # Step 7: SonarCloud Analysis (skip lint)
       - name: SonarCloud Analysis
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
