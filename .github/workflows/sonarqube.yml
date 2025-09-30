@@ -34,13 +34,14 @@ on:
 
 permissions:
   contents: read
+  security-events: write
 
 jobs:
   build-and-sonar:
     runs-on: ubuntu-latest
 
     steps:
-      # Step 1: Checkout code
+      # Step 1: Checkout repository
       - name: Checkout code
         uses: actions/checkout@v3
         with:
@@ -57,7 +58,7 @@ jobs:
       - name: Make Gradle wrapper executable
         run: chmod +x ./gradlew
 
-      # Step 4: Cache Gradle
+      # Step 4: Cache Gradle dependencies
       - name: Cache Gradle
         uses: actions/cache@v3
         with:
@@ -67,19 +68,16 @@ jobs:
           key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
           restore-keys: ${{ runner.os }}-gradle
 
-      # Step 5: Run only unit tests (skip connected tests) and skip lint
-      - name: Run unit tests (debug)
-        run: ./gradlew testDebugUnitTest -x lint --no-daemon
+      # Step 5: Build project (skip lint and connected tests temporarily)
+      - name: Build project
+        run: ./gradlew build -x lint -x connectedDebugAndroidTest --no-daemon
 
-      # Step 6: Build release variant (skip lint)
-      - name: Build release variant
-        run: ./gradlew assembleRelease -x lint --no-daemon
-
-      # Step 7: SonarCloud Analysis (skip lint)
+      # Step 6: Run SonarCloud analysis
       - name: SonarCloud Analysis
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        run: ./gradlew sonarqube -x lint \
+        run: ./gradlew sonarqube \
+          -x lint \
           -Dsonar.projectKey=${{ secrets.SONAR_PROJECT_KEY }} \
           -Dsonar.organization=${{ secrets.SONAR_ORG }} \
           -Dsonar.host.url=${{ secrets.SONAR_HOST_URL }} \
