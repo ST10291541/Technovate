@@ -24,24 +24,23 @@
 # Feel free to take a look at our documentation (https://docs.sonarqube.org/latest/analysis/github-integration/)
 # or reach out to our community forum if you need some help (https://community.sonarsource.com/c/sq/10)
 
-name: SonarCloud Scan
+name: Gradle SonarCloud Scan
 
 on:
   push:
     branches:
-      - main      # <-- your default branch
+      - main        # <-- default branch
   pull_request:
     types: [opened, synchronize, reopened]
 
 jobs:
-  sonarcloud:
-    name: SonarCloud
+  build-and-sonar:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
         with:
-          fetch-depth: 0  # <-- required to fetch all branches for SonarCloud
+          fetch-depth: 0    # required for SonarCloud branch detection
 
       - name: Set up JDK 17
         uses: actions/setup-java@v3
@@ -49,17 +48,23 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
-      - name: Cache SonarCloud packages
+      - name: Cache Gradle
         uses: actions/cache@v3
         with:
-          path: ~/.sonar/cache
-          key: ${{ runner.os }}-sonar
-          restore-keys: ${{ runner.os }}-sonar
+          path: |
+            ~/.gradle/caches
+            ~/.gradle/wrapper/
+          key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
+          restore-keys: ${{ runner.os }}-gradle
 
-      - name: SonarCloud Scan
-        uses: SonarSource/sonarcloud-github-action@v2
-        with:
-          organization: "YOUR_ORG_NAME"         # <-- replace with your SonarCloud org
-          projectKey: "YOUR_PROJECT_KEY"        # <-- replace with your SonarCloud project key
+      - name: Build project
+        run: ./gradlew build --no-daemon
+
+      - name: SonarCloud Analysis
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        run: ./gradlew sonarqube \
+          -Dsonar.projectKey=YOUR_PROJECT_KEY \
+          -Dsonar.organization=YOUR_ORG_NAME \
+          -Dsonar.host.url=https://sonarcloud.io \
+          -Dsonar.login=${SONAR_TOKEN}
