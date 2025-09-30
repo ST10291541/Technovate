@@ -97,3 +97,4 @@ This application was created by **The Technovate Team**
 
 - CHOC Official Website: (https://www.choc.org.za)
 - Android Developers Documentation:(https://developer.android.com)
+- Confluence Task Tracker: (https://technovate.atlassian.net/wiki/x/0oAB)
