@@ -9,7 +9,7 @@ android {
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "vcmsa.projects.chocui"
+        applicationId = "choc.kzn"
         minSdk = 24
         targetSdk = 35
         versionCode = 2
