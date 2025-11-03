@@ -30,6 +30,11 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyC4q85aLNS0fhw7CTeSKxT1ZrIedXwBPj4" />
 
+
+        <meta-data
+            android:name="com.google.android.youtube.API_KEY"
+            android:value="AIzaSyBmS-0rJinabvv2jNd6bOiRJvy-UEX0UMI" />
+
         <activity
             android:name=".NutritionActivity"
             android:exported="false" />
